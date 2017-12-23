@@ -1,0 +1,32 @@
+package com.manas.main;
+
+import teamworks.TWObject;
+import teamworks.TWObjectFactory;
+
+
+public class IbmBo {
+	
+	public void readBO(TWObject obj )
+	{
+		if(obj instanceof TWObject)
+		{
+			TWObject two = (TWObject)obj.getPropertyValue("address");
+			System.out.println(obj.getPropertyNames());
+
+			System.out.println(two.getPropertyValue("city"));
+			
+		}
+	}
+	
+	public teamworks.TWObject writeBO() throws Exception
+	{
+		teamworks.TWObject two = TWObjectFactory.createObject("PersonalDetails");
+		two.setPropertyValue("firstName", "Chinu");
+		two.setPropertyValue("lastName", "Chinu");
+		two.setPropertyValue("fatherName", "Chinu");
+		two.setPropertyValue("emailId", "Chinu");
+		
+		return two;
+	}
+
+}

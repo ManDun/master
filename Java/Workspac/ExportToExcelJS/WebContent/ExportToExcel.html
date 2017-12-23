@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Export to Excel</title>
+<script>
+	function CreateExcelSheet(el) {
+
+		var x = document.getElementById(el).rows;
+
+		var xls = new ActiveXObject("Excel.Application");
+		xls.visible = true;
+		xls.Workbooks.Add
+		for (i = 0; i < x.length; i++) {
+			var y = x[i].cells;
+
+			for (j = 0; j < y.length; j++) {
+				xls.Cells(i + 1, j + 1).Value = y[j].innerText;
+			}
+		}
+		xls.Visible = true;
+		xls.UserControl = true;
+
+		return xls;
+	}
+</script>
+</head>
+<body>
+	<table id="tableExport">
+		<tr>
+			<td>Sample1</td>
+			<td>Sample2</td>
+			<td>Sample3</td>
+			<td>Sample4</td>
+		</tr>
+
+		<tr>
+			<td>Sample5</td>
+			<td>Sample6</td>
+			<td>Sample7</td>
+			<td>Sample8</td>
+		</tr>
+	</table>
+	<button onclick="CreateExcelSheet('tableExport')">Export To Excel</button>
+</body>
+</html>

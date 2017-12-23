@@ -1,0 +1,343 @@
+
+
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>IBM BPM Coach</TITLE>
+<LINK REL="stylesheet" HREF="../portal/js/dojo/1.6.1/dijit/themes/soria/soria.css" TYPE="text/css">
+<LINK REL="stylesheet" HREF="html/common/coach_designer.css" TYPE="text/css">
+<LINK REL="stylesheet" HREF="html/common/coach_toolbar.css" TYPE="text/css">
+<LINK REL="stylesheet" HREF="html/common/coach_popup.css" TYPE="text/css"><LINK REL="stylesheet" HREF="http://HP:9080/teamworks/webasset/2064.d06391b9-cc8e-4f8d-a244-84f3eeff5045/toolkit/TWSYS/W/coach_designer.css" TYPE="text/css"><style type="text/css">.dijitCalendarYearLabel {font-size:12px;} </style>
+<SCRIPT type="text/javascript" src="../portal/js/dojo/1.6.1/dojo/dojo.js" djConfig="parseOnLoad:true, locale:'en'"></SCRIPT>
+<SCRIPT type="text/javascript" src="script/coach_designer.js"></SCRIPT>
+<SCRIPT type="text/javascript" src="script/javascript.js"></SCRIPT>
+<SCRIPT type="text/javascript" src="script/validation.js"></SCRIPT>
+<SCRIPT type="text/javascript" src="script/formatting/number-functions.js"></SCRIPT>
+<SCRIPT type="text/javascript" src="script/formatting/lombardi-format.js"></SCRIPT>
+<SCRIPT type="text/javascript" src="script/DateTimePicker.js"></SCRIPT>
+<SCRIPT type="text/javascript" src="script/XmlStringStore.js"></SCRIPT><SCRIPT type="text/javascript">
+            dojo.require("dojox.data.XmlStore");
+            dojo.require("dijit.form.ComboBox");
+            dojo.require("DateTimePicker");
+            dojo.require("dojo.number");
+            dojo.require("lombardi.data.XmlStringStore");
+
+            dojo.addOnLoad(function(){
+              // Execute on load.
+
+              // Set the default toolip position to appear above or below the input
+              dijit.Tooltip.defaultPosition = ["above","below"];
+
+            });
+          </SCRIPT>
+<SCRIPT type="text/javascript">
+ </SCRIPT>
+<SCRIPT type="text/javascript">
+ </SCRIPT><SCRIPT type="text/javascript">var coachSnapshotContext = '2064.d06391b9-cc8e-4f8d-a244-84f3eeff5045';</SCRIPT>
+</HEAD>
+<BODY onLoad="pageLoadOperations()" class="soria">
+<form style="display:none" id="helperForm" name="helperForm" action="" target="targetFrame" method="POST" enctype="multipart/form-data"></form>
+<iframe style="display:none" id="targetFrame" name="targetFrame" src="javascript:false"></iframe>
+<table ID="content" style="" border="0" cellspacing="0" cellpadding="0" height="100%">
+<tr>
+<td style="padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;" valign="top" height="1%">
+<TABLE id="innerContent" cellspacing="0" cellpadding="0" valign="top">
+<TR id="innerContentHeadingTR">
+<TD style="padding: 0px;">
+<DIV class="heading">
+<table class="headingTable" style="" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="headingLeft" nowrap="true">
+<H1>IBM BPM Coach</H1>
+</td><td class="headingCenter" nowrap="true">
+<DIV class="heading-right" style="text-align:right"></DIV>
+</td>
+</tr>
+</table>
+</DIV>
+</TD>
+</TR>
+<TR id="innerContentBodyTR">
+<TD id="innerContentBodyTD" align="center" valign="top">
+<FORM action="coach.lsw" method="POST" onSubmit="clickSubmitOnSubmit(this);">
+<INPUT type="hidden" name="zTaskId" value="p12"><INPUT type="hidden" name="zComponentId" value="3003.8c196ceb-d0a5-4720-b3d7-a3ed7f28d6a2"><INPUT type="hidden" name="zComponentName" value="Coach"><INPUT type="hidden" name="zWorkflowState" value="3"><INPUT type="hidden" name="zDbg" value="0"><INPUT type="hidden" name="zButtonName" value="Button0"><INPUT type="hidden" name="zActType" value="CoachDesigner"><INPUT type="hidden" name="applicationInstanceId" value="guid:728dc0c0ad6eca16:3a2cdeef:14294ea06da:-7ffe"><INPUT type="hidden" name="applicationId" value="2">
+<DIV class="sectionPadding sectionPaddingStyled">
+<TABLE class="layout  twLayout  twStyledLayout" cellpadding="0" cellspacing="0" id="section">
+<TR class="layoutHeader twLayoutTitle">
+<TD class="layoutHeaderLeft">&nbsp;</TD><TD class="layoutHeaderCenter" id="section_SectionTitle">
+<DIV class="sectionHeaderTitle twSectionHeaderTitle">Section Title</DIV>
+</TD><TD class="layoutHeaderRight">&nbsp;</TD>
+</TR>
+<TR class="layoutSubHeader twLayoutSubHeader">
+<TD class="layoutSubHeader" colspan="3">&nbsp;</TD>
+</TR>
+<TR class="layoutBody twLayoutBody">
+<TD class="layoutBodyLeft layoutBodyLeftStyled">&nbsp;</TD><TD class="layoutBodyCenter layoutBodyCenterStyled">
+<DIV class="sectionBody twSectionBody" id="section_controls">
+<TABLE class="controlLayout">
+<TR class="twControlTR" id="section_Row0">
+<TD class="sectionBodyCenterControl twControlTD " valign="top" width="50%" rowspan="1" colspan="2"><INPUT type="hidden" id="TBL_SELECTION_LIST_Table0" name="TBL_SELECTION_LIST_tw#local#ExcelData" value=" ">
+<DIV id="Table0-div" class="repeatingTable">
+<TABLE cellspacing="0" class="tableControlNoLabel twControl twTable" id="Table0">
+<TR class="tableControlHeader twTableHeaderTR" id="_Header">
+<TH WIDTH="1%">&nbsp;</TH><TH width="" class="twTableTH">
+<P align="left" class="twLabel">First Name</P>
+</TH><TH width="" class="twTableTH">
+<P align="left" class="twLabel">Last Name</P>
+</TH><TH width="" class="twTableTH">
+<P align="left" class="twLabel">Father Name</P>
+</TH><TH width="" class="twTableTH">
+<P align="left" class="twLabel">Email Id</P>
+</TH><TH width="" class="twTableTH">
+<P align="left" class="twLabel">Date Of Birth</P>
+</TH><TH width="" class="twTableTH">
+<P align="left" class="twLabel">Occupation</P>
+</TH><TH width="" class="twTableTH">
+<P align="left" class="twLabel">Annual Income</P>
+</TH>
+</TR>
+
+
+<TR class="tableControlDataRow evenRow twTableTR" id="Table0_0">
+<TD onClick="selectRow(this, 'single', true, 0, null, false);"><INPUT type="radio" name="TBL_SELECTION_tw#local#ExcelData" value="0"></TD>
+<TD class="twTableTD" onClick="selectRow(this, 'single', true, 0, null, false);">
+<DIV>
+<DIV id="tw#local#ExcelData#0#firstName">
+<P locale="en" isNumeric="false" baseType="String" class="outputTextNoLabel twControl twOutputText" id="TableCellfirstName0_0">Manas</P>
+<script type="text/javascript">addEventHandler('TableCellfirstName0_0', 'onchange', function() {
+      clearErrorMsg();
+      });
+
+    </script>
+</DIV>
+</DIV>
+</TD>
+<TD class="twTableTD" onClick="selectRow(this, 'single', true, 0, null, false);">
+<DIV>
+<DIV id="tw#local#ExcelData#0#lastName">
+<P locale="en" isNumeric="false" baseType="String" class="outputTextNoLabel twControl twOutputText" id="TableCelllastName0_0">MAllick</P>
+<script type="text/javascript">addEventHandler('TableCelllastName0_0', 'onchange', function() {
+      clearErrorMsg();
+      });
+
+    </script>
+</DIV>
+</DIV>
+</TD>
+<TD class="twTableTD" onClick="selectRow(this, 'single', true, 0, null, false);">
+<DIV>
+<DIV id="tw#local#ExcelData#0#fatherName">
+<P locale="en" isNumeric="false" baseType="String" class="outputTextNoLabel twControl twOutputText" id="TableCellfatherName0_0">Mana</P>
+<script type="text/javascript">addEventHandler('TableCellfatherName0_0', 'onchange', function() {
+      clearErrorMsg();
+      });
+
+    </script>
+</DIV>
+</DIV>
+</TD>
+<TD class="twTableTD" onClick="selectRow(this, 'single', true, 0, null, false);">
+<DIV>
+<DIV id="tw#local#ExcelData#0#emailId">
+<P locale="en" isNumeric="false" baseType="String" class="outputTextNoLabel twControl twOutputText" id="TableCellemailId0_0">Manas1104</P>
+<script type="text/javascript">addEventHandler('TableCellemailId0_0', 'onchange', function() {
+      clearErrorMsg();
+      });
+
+    </script>
+</DIV>
+</DIV>
+</TD>
+<TD class="twTableTD" onClick="selectRow(this, 'single', true, 0, null, false);">
+<DIV>
+<DIV id="tw#local#ExcelData#0#dateOfBirth">
+<P locale="en" isNumeric="false" baseType="Date" class="outputTextNoLabel twControl twOutputText" id="TableCelldateOfBirth0_0">11-26-2013</P>
+<script type="text/javascript">addEventHandler('TableCelldateOfBirth0_0', 'onchange', function() {
+      clearErrorMsg();
+      });
+
+    </script>
+</DIV>
+</DIV>
+</TD>
+<TD class="twTableTD" onClick="selectRow(this, 'single', true, 0, null, false);">
+<DIV>
+<DIV id="tw#local#ExcelData#0#occupation">
+<P locale="en" isNumeric="false" baseType="String" class="outputTextNoLabel twControl twOutputText" id="TableCelloccupation0_0">SE</P>
+<script type="text/javascript">addEventHandler('TableCelloccupation0_0', 'onchange', function() {
+      clearErrorMsg();
+      });
+
+    </script>
+</DIV>
+</DIV>
+</TD>
+<TD class="twTableTD" onClick="selectRow(this, 'single', true, 0, null, false);">
+<DIV>
+<DIV id="tw#local#ExcelData#0#annualIncome">
+<P locale="en" isNumeric="false" baseType="String" class="outputTextNoLabel twControl twOutputText" id="TableCellannualIncome0_0">400000</P>
+<script type="text/javascript">addEventHandler('TableCellannualIncome0_0', 'onchange', function() {
+      clearErrorMsg();
+      });
+
+    </script>
+</DIV>
+</DIV>
+</TD>
+</TR>
+
+
+<TR class="tableControlDataRow oddRow twTableTR" id="Table0_1">
+<TD onClick="selectRow(this, 'single', true, 1, null, false);"><INPUT type="radio" name="TBL_SELECTION_tw#local#ExcelData" value="1"></TD>
+<TD class="twTableTD" onClick="selectRow(this, 'single', true, 1, null, false);">
+<DIV>
+<DIV id="tw#local#ExcelData#1#firstName">
+<P locale="en" isNumeric="false" baseType="String" class="outputTextNoLabel twControl twOutputText" id="TableCellfirstName0_1">Manas</P>
+<script type="text/javascript">addEventHandler('TableCellfirstName0_1', 'onchange', function() {
+      clearErrorMsg();
+      });
+
+    </script>
+</DIV>
+</DIV>
+</TD>
+<TD class="twTableTD" onClick="selectRow(this, 'single', true, 1, null, false);">
+<DIV>
+<DIV id="tw#local#ExcelData#1#lastName">
+<P locale="en" isNumeric="false" baseType="String" class="outputTextNoLabel twControl twOutputText" id="TableCelllastName0_1">MAllick</P>
+<script type="text/javascript">addEventHandler('TableCelllastName0_1', 'onchange', function() {
+      clearErrorMsg();
+      });
+
+    </script>
+</DIV>
+</DIV>
+</TD>
+<TD class="twTableTD" onClick="selectRow(this, 'single', true, 1, null, false);">
+<DIV>
+<DIV id="tw#local#ExcelData#1#fatherName">
+<P locale="en" isNumeric="false" baseType="String" class="outputTextNoLabel twControl twOutputText" id="TableCellfatherName0_1">Mana</P>
+<script type="text/javascript">addEventHandler('TableCellfatherName0_1', 'onchange', function() {
+      clearErrorMsg();
+      });
+
+    </script>
+</DIV>
+</DIV>
+</TD>
+<TD class="twTableTD" onClick="selectRow(this, 'single', true, 1, null, false);">
+<DIV>
+<DIV id="tw#local#ExcelData#1#emailId">
+<P locale="en" isNumeric="false" baseType="String" class="outputTextNoLabel twControl twOutputText" id="TableCellemailId0_1">Manas1104</P>
+<script type="text/javascript">addEventHandler('TableCellemailId0_1', 'onchange', function() {
+      clearErrorMsg();
+      });
+
+    </script>
+</DIV>
+</DIV>
+</TD>
+<TD class="twTableTD" onClick="selectRow(this, 'single', true, 1, null, false);">
+<DIV>
+<DIV id="tw#local#ExcelData#1#dateOfBirth">
+<P locale="en" isNumeric="false" baseType="Date" class="outputTextNoLabel twControl twOutputText" id="TableCelldateOfBirth0_1">11-26-2013</P>
+<script type="text/javascript">addEventHandler('TableCelldateOfBirth0_1', 'onchange', function() {
+      clearErrorMsg();
+      });
+
+    </script>
+</DIV>
+</DIV>
+</TD>
+<TD class="twTableTD" onClick="selectRow(this, 'single', true, 1, null, false);">
+<DIV>
+<DIV id="tw#local#ExcelData#1#occupation">
+<P locale="en" isNumeric="false" baseType="String" class="outputTextNoLabel twControl twOutputText" id="TableCelloccupation0_1">SE</P>
+<script type="text/javascript">addEventHandler('TableCelloccupation0_1', 'onchange', function() {
+      clearErrorMsg();
+      });
+
+    </script>
+</DIV>
+</DIV>
+</TD>
+<TD class="twTableTD" onClick="selectRow(this, 'single', true, 1, null, false);">
+<DIV>
+<DIV id="tw#local#ExcelData#1#annualIncome">
+<P locale="en" isNumeric="false" baseType="String" class="outputTextNoLabel twControl twOutputText" id="TableCellannualIncome0_1">400000</P>
+<script type="text/javascript">addEventHandler('TableCellannualIncome0_1', 'onchange', function() {
+      clearErrorMsg();
+      });
+
+    </script>
+</DIV>
+</DIV>
+</TD>
+</TR>
+
+</TABLE>
+</DIV>
+<SCRIPT type="text/javascript"></SCRIPT></TD>
+</TR>
+<TR class="twControlTR" id="section_Row0">
+<TD class="sectionBodyCenterControl twControlTD " valign="top" width="50%" rowspan="1" colspan="2">
+<DIV class="customHTML" id="CustomHTML0"><script>
+var tableToExcel = (function() {
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+
+
+</script></DIV>
+</TD>
+</TR>
+<TR class="twControlTR" id="section_Row0">
+<TD class="sectionBodyCenterControl twControlTD " valign="top" width="50%" rowspan="1" colspan="2">
+<DIV class="buttonGroup twControl twButtonGroup" align="right" id="ButtonGroup0">
+<BUTTON class="layoutButton twButton ButtonGroup0_Button0" type="submit" id="ButtonGroup0_Button0" name="ButtonGroup0#Button0" onClick="if (isFormSubmitted(this, true)) { return false; } else { return true; }">OK</BUTTON><BUTTON class="layoutButton twButton ButtonGroup0_Button1" type="submit" id="ButtonGroup0_Button1" name="ButtonGroup0#Button1" onClick="if (validationScriptButtonGroup0_Button1()) { if (isFormSubmitted(this, true)) { return false; } else { return true; } } else { return false; }">Export</BUTTON><script type="text/javascript">
+          function validationScriptButtonGroup0_Button1() {
+        var tab = dojo.byId('Table0_0').innerHTML;
+alert(tab);
+tableToExcel('Table0', 'W3C Example Table')
+          }
+        </script>
+</DIV>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+</TD><TD class="layoutBodyRight layoutBodyRightStyled">&nbsp;</TD>
+</TR>
+<TR class="layoutFooter twLayoutFooter layoutFooterStyled">
+<TD class="layoutFooterLeft layoutFooterLeftStyled">&nbsp;</TD><TD class="layoutFooterCenter layoutFooterCenterStyled">&nbsp;</TD><TD class="layoutFooterRight layoutFooterRightStyled">&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+</FORM>
+<DIV id="coachErrorMsg"></DIV>
+</TD>
+</TR>
+</TABLE>
+</td>
+</tr>
+<tr id="contentBottomTR">
+<td height="1%" valign="bottom">
+<DIV id="content-bottom" height="100%" valign="bottom">
+<DIV class="left"></DIV>
+<DIV class="right"></DIV>
+</DIV>
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+              setupInitialVisibility();
+            </script>
+</BODY>
+</HTML>

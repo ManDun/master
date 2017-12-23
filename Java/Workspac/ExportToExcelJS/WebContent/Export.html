@@ -1,0 +1,37 @@
+<html>
+<head>
+<script type="text/javascript" src="Script2.js"></script>
+</head>
+<body>
+
+	<h1>tableToExcel Demo</h1>
+	<p>Exporting the W3C Example Table</p>
+
+	<input type="button" onclick="tableToExcel('testTable', 'W3C Example Table')" value="Export to Excel">
+	
+	<input type="button" onclick="normalexport('testTable')" value="Export Normal">
+
+	<table id="testTable" border="2">
+	<tr>
+	<td>Sample1</td>
+	<td>Sample2</td>
+	<td>Sample3</td>
+	<td>Sample4</td>
+	</tr>
+	
+	<tr>
+	<td>Sample5</td>
+	<td>Sample6</td>
+	<td>Sample7</td>
+	<td>Sample8</td>
+	</tr>
+	</table>
+
+</body>
+</html>
+
+
+<div id="dvData">
+    This is the place for Excel table
+</div>
+<button id="btnExport">Click for Save</button>

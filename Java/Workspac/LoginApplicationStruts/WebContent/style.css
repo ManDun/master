@@ -1,0 +1,29 @@
+@CHARSET "ISO-8859-1";
+
+body
+{
+	font-family: calibri;
+}
+
+.heading
+{
+	font-size: 50px;
+}
+
+.labels
+{
+	font-size: 20px;
+}
+
+.buttons
+{
+	font-family: calibri;
+	font-size: 20px;
+	background-color: #124578;	
+	color: white;
+}
+
+.error
+{
+	color: red;
+}

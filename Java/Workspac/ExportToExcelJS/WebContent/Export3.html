@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+function excel()
+{
+	window.open('data:application/vnd.ms-excel,'+encodeURIComponent(document.getElementById('tableExport').outerHTML));
+}
+</script>
+</head>
+<body>
+	<table id="tableExport">
+		<tr>
+			<td>Sample1</td>
+			<td>Sample2</td>
+			<td>Sample3</td>
+			<td>Sample4</td>
+		</tr>
+
+		<tr>
+			<td>Sample5</td>
+			<td>Sample6</td>
+			<td>Sample7</td>
+			<td>Sample8</td>
+		</tr>
+	</table>
+<button onclick="excel()">Export</button>
+</body>
+</html>

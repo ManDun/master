@@ -1,0 +1,11 @@
+package com.manas.DS;
+
+public class Class1 {
+	
+	public void DSCheck()
+	{
+		char ch = '\123';
+		System.out.println(ch);
+ 	}
+
+}

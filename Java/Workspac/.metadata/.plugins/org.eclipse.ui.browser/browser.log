@@ -1,0 +1,182 @@
+
+Nov 02, 2013 24:25:50.56 NEW SESSION
+Nov 02, 2013 24:25:50.56 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 24:25:50.56 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 24:34:48.00 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 24:34:48.00 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 24:52:12.33 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 24:52:12.33 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+
+Nov 02, 2013 14:20:34.44 NEW SESSION
+Nov 02, 2013 14:20:34.44 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 14:20:34.44 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 14:21:21.12 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 14:21:21.12 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 14:48:52.31 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 14:48:52.31 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 14:58:21.56 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 14:58:21.56 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:01:07.00 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:01:07.00 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:03:40.64 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:03:40.64 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:04:20.37 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:04:20.37 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:06:01.40 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:06:01.40 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:06:31.49 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:06:31.49 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:07:02.17 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:07:02.17 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:07:27.08 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:07:27.08 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:08:35.20 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:08:35.20 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:22:12.38 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:22:12.38 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:27:02.52 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:27:02.52 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:29:05.59 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:29:05.59 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:33:51.22 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:33:51.24 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:35:11.61 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:35:11.61 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:35:43.79 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:35:43.79 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:36:04.71 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:36:04.71 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:37:31.97 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:37:31.97 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:38:01.38 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:38:01.38 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:38:52.59 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:38:52.61 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:58:28.75 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:58:28.75 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:59:09.12 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:59:09.13 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 15:59:29.84 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 15:59:29.84 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 16:00:18.86 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 16:00:18.86 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 16:00:44.96 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 16:00:44.96 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 16:00:55.73 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 16:00:55.73 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 16:01:28.65 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 02, 2013 16:01:28.66 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 16:02:13.52 NOTE: child process received `Goodbye', closing down
+Nov 02, 2013 16:02:13.52 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+
+Nov 04, 2013 14:59:10.64 NEW SESSION
+Nov 04, 2013 14:59:10.64 NOTE: child process received `Goodbye', closing down
+Nov 04, 2013 14:59:10.68 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 04, 2013 15:01:48.11 NOTE: child process received `Goodbye', closing down
+Nov 04, 2013 15:01:48.11 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+
+Nov 04, 2013 17:09:21.91 NEW SESSION
+Nov 04, 2013 17:09:21.91 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 04, 2013 17:09:21.91 NOTE: child process received `Goodbye', closing down
+Nov 04, 2013 17:13:22.32 NOTE: child process received `Goodbye', closing down
+Nov 04, 2013 17:13:22.32 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 04, 2013 17:32:25.78 NOTE: child process received `Goodbye', closing down
+Nov 04, 2013 17:32:25.78 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 04, 2013 17:50:38.69 NOTE: child process received `Goodbye', closing down
+Nov 04, 2013 17:50:38.69 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 04, 2013 18:06:05.43 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 04, 2013 18:06:05.43 NOTE: child process received `Goodbye', closing down
+Nov 04, 2013 18:10:57.19 NOTE: child process received `Goodbye', closing down
+Nov 04, 2013 18:10:57.19 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 04, 2013 18:11:58.23 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 04, 2013 18:11:58.23 NOTE: child process received `Goodbye', closing down
+Nov 04, 2013 18:13:08.65 NOTE: child process received `Goodbye', closing down
+Nov 04, 2013 18:13:08.65 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+
+Nov 06, 2013 21:46:11.22 NEW SESSION
+Nov 06, 2013 21:46:11.22 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 21:46:11.22 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 21:57:07.51 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 21:57:07.51 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 21:58:25.20 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 21:58:25.20 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 22:10:35.44 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 22:10:35.44 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 22:10:58.27 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 22:10:58.28 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 22:13:56.66 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 22:13:56.66 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 22:13:56.68 threadbase being destructed
+Nov 06, 2013 22:13:56.68 threadbase destructed
+Nov 06, 2013 22:13:56.68 threadbase being destructed
+Nov 06, 2013 22:13:56.68 threadbase destructed
+Nov 06, 2013 22:13:56.68 threadbase being destructed
+Nov 06, 2013 22:13:56.68 threadbase destructed
+Nov 06, 2013 22:16:29.96 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 22:16:29.96 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 22:19:09.80 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 22:19:09.80 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 22:25:21.17 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 22:25:21.17 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 22:26:01.70 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 22:26:01.70 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 22:27:01.74 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 22:27:01.76 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 22:59:54.68 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 22:59:54.68 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:00:26.13 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:00:26.13 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:02:28.90 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:02:28.90 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:06:36.63 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:06:36.63 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:11:00.25 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:11:00.25 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:11:43.33 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:11:43.33 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:13:06.98 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:13:06.98 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:13:46.34 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:13:46.34 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:14:08.52 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:14:08.52 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:15:22.01 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:15:22.01 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:15:39.67 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:15:39.68 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:16:00.16 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:16:00.16 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:19:46.59 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:19:46.59 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:21:42.05 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:21:42.05 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:27:20.04 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:27:20.04 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:28:27.27 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:28:27.27 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:29:22.13 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:29:22.13 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:40:12.86 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:40:12.86 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:44:36.90 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:44:36.90 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:47:47.47 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:47:47.47 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:49:16.30 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:49:16.30 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:55:37.99 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:55:37.99 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 06, 2013 23:57:02.05 NOTE: child process received `Goodbye', closing down
+Nov 06, 2013 23:57:02.05 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+
+Nov 08, 2013 19:45:54.73 NEW SESSION
+Nov 08, 2013 19:45:54.73 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 08, 2013 19:45:54.81 NOTE: child process received `Goodbye', closing down
+
+Nov 30, 2013 17:43:44.45 NEW SESSION
+Nov 30, 2013 17:43:44.45 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 30, 2013 17:43:44.46 NOTE: child process received `Goodbye', closing down
+Nov 30, 2013 17:51:10.88 NOTE: child process received `Goodbye', closing down
+Nov 30, 2013 17:51:10.88 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299
+Nov 30, 2013 17:52:19.42 NOTE: child process received `Goodbye', closing down
+Nov 30, 2013 17:52:19.43 WARNING: pipe error: 109: file e:/builds/moz2_slave/rel-m-rel-w32_bld-000000000000/build/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 299

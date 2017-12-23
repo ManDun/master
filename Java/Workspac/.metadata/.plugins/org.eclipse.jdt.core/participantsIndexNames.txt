@@ -1,0 +1,25 @@
+INDEX VERSION 1.126
+E:\Eclipse\Workspac\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1160709467.index
+\Day4_Assignment10\src
+F:\Work\Eclipse\Workspac\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\474261370.index
+\Test2JSF\src
+F:\Work\Eclipse\Workspac\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1160709467.index
+\Day4_Assignment10\src
+E:\Eclipse\Workspac\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2249658790.index
+\StrutsTest\src
+F:\Work\Eclipse\Workspac\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3594336917.index
+\Student Counselling\src
+E:\Eclipse\Workspac\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3594336917.index
+\Student Counselling\src
+F:\Work\Eclipse\Workspac\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3496022808.index
+\LoginApplicationStruts\src
+E:\Eclipse\Workspac\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2587550377.index
+\Struts Test\src
+E:\Eclipse\Workspac\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\474261370.index
+\Test2JSF\src
+E:\Eclipse\Workspac\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3496022808.index
+\LoginApplicationStruts\src
+F:\Work\Eclipse\Workspac\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4158724813.index
+\HelloWorldStruts2\src
+E:\Eclipse\Workspac\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4158724813.index
+\HelloWorldStruts2\src
