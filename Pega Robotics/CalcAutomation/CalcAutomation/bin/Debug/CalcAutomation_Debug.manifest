@@ -1,0 +1,8 @@
+<DeploymentManifest version="5.0">
+  <CompositeStudioProject name="CalcAutomation" fileName="CalcAutomation.dll" assemblyName="CalcAutomation.dll" id="Project-8D4A9C190E135CA" version="8.0.1016.0" deploymentVersion="1.0" configuration="" createdWith="Build" obfuscated="False" runtime="True" digest="03962570E667F60DDC733855DDA5E2">
+    <Assemblies>
+      <Assembly value="CalcAutomation.dll" digest="95CF569982AC4171EDC9B94A1D0580" />
+      <Assembly value="CalcAutomation.pdb" digest="F283BD6DEBDBF5DAF81A53C5B23086" />
+    </Assemblies>
+  </CompositeStudioProject>
+</DeploymentManifest>

@@ -1,0 +1,8 @@
+<DeploymentManifest version="5.0">
+  <CompositeStudioProject name="TrainingWebAdapter" fileName="TrainingWebAdapter.dll" assemblyName="TrainingWebAdapter.dll" id="Project-8D5CF0CB530B1D1" version="8.0.1089.0" deploymentVersion="1.0" configuration="" createdWith="Build" obfuscated="False" runtime="True" digest="C826BD1844D905614900A5980A27AC">
+    <Assemblies>
+      <Assembly value="TrainingWebAdapter.dll" digest="1D4B08D6B0CE74A78F68841A1A2B8D" />
+      <Assembly value="TrainingWebAdapter.pdb" digest="0C923392EB7704516C5648D3C96FA2" />
+    </Assemblies>
+  </CompositeStudioProject>
+</DeploymentManifest>

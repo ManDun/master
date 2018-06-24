@@ -1,0 +1,7 @@
+<Cache>
+  <Project configuration="" />
+  <DesignComponents>
+    <DesignComponent id="DesignForm-8D5D56BF1483106" className="CustomerInformation" type="WinForm" isPublic="True" screenShots="" />
+    <DesignComponent id="GlobalContainer-8D5D570157305BE" className="_Main_GC" type="GlobalContainer" isPublic="True" screenShots="" />
+  </DesignComponents>
+</Cache>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_Seasons_P_GetSeason_1_" xml:space="preserve">
+    <value>OSVSXMgQAALVUW2uDMBT+K+Kz8+5U0EJrNxh72JilexwxHiEsJiEXmP9+lW0V19L1YZKXJOd8l5OcpKh4LzgDph9Yx1fFbhBg7RE1UNpPAlgtEHPXRvMeacKPUy5ty1sVa6Wgb+hwATHLe4EOJDAM6hTbK8wlJY1j7UGqA7KMXX8cjlUZqo2EkoHRElHHejYNJfgRhh1/B1Y2aYoSnNwGeRSDn+VnvdWD0tAvxf5T+cSfXcvfJW2TB9BiP2wznMAfJ9sioQ8S7is0y4sdr3FxqYozLTlViwvVWBKh/0vGO9fa24GhnuBrun7DOQXE7j6EBDX6ucm2SeyHaRSEWZKlkW2NT7K0vzndE8DbL4A7hb4cXnBzTyhM6zF7Ywht51ve/Iv4BA==</value>
+  </data>
+  <data name="_Seasons_P_GetSeason_2_" xml:space="preserve">
+    <value>OSVSXIQIAAI2S3U7DMAyFXyXyA3Rs1+skxobEBRSpE7dT1plikdolThB5e/onUMUQ3NnHPv5OpKzvMbzI2ZwT24aqQ2oxh1ED00ldd9xz8OlRiMP+A6sYEIx1ZPVhGH9p76R0Ikch5bDDZxtdKBiMSvRVtwfm5KR67QmjsWiRy9Zydh2DNDaQcLZDpZqzG2HGqle2vUezHxEGHYzHED2PqcukAZvsSegMm3VrvW2mFwz1cpb6LaJPYIbJzL4VcWi73KR3nMPBR+zrIoYcbq3TrmtFqc+WwxWYxRx1vMBStCp8CVYGT1z/j7X8hbWasRqt/wZNtyfSiP0GrQbQYvwEm08=</value>
+  </data>
+  <data name="_Seasons_P_GetSeason_3_" xml:space="preserve">
+    <value>OSVSXygAAAF2OQQrCQAxFrzLkAHoBK+hCdCNiC67TmYDBdKZMpsp4eqOlG5fv/Z9PNpecRsqlulAjDuy7OlIDiwVn0vgUtWD0BM5jvBKGBro8zXjLXGjh8jtvqxYaVvuUhDCCQ2HU89+S3tMkoaXMFr8tOqCo+Scr9yxcagM7eWHVI4dANqNpyt6K4HpJ/vF9dR4Ft95+AA==</value>
+  </data>
+  <data name="_Seasons_P_GetSeason_4_" xml:space="preserve">
+    <value>OSVSXyQAAAF2OQQrCQAxFrzLkAHoBK7gR3YjYgut0JmhwOlMmqTKe3mjpxuV7P/+TzbnkkYpWF2rCgX1XR2pgseBMGh+TKCZP4DymC2FooCvTjNfCSgvrr95WURpWrRZON3AYGeX0NyT3PMXQUmGL3xbtMYr5Jwv3HFlrA7v4wioHDoGSNfJUvB2C62P2j++n8yi49fYD</value>
+  </data>
+  <data name="_Seasons_P_GetSeason_5_" xml:space="preserve">
+    <value>OSVSXwwAAAFWOQQrCQAxFrzLkAHoBK7gRVyJt0XU6EzCYdspkRhlPb6x04fL9n/fJ7pLiTClXF+qEI/u+ztTAmoKz0LglLZLBeZxawtBAnwoteEucaeW8yF3VTOPmGjmAQ2HU89+I3mOR0FFiK99WHFHU7CcrDyycawMHeWHVE4dAkxmxJG+H4AaJ/vH98TcJbrv/AA==</value>
+  </data>
+  <data name="_Seasons_P_GetSeason_6_" xml:space="preserve">
+    <value>OSVSXxgAAAD2OQQoCMQxFr1JyAMW9I+hCXIk4A64zbcBgZzomrVJPbxzR5fv5/5H1SdJEkqsLdcSBfVcnauCXgrPQeELBYQXO43gmDA3sMSrNfBHO1uikGOd53VbNNCx2KUXCERxGRj3OonshMateU4mhJWG7vejve7Byz5FzbWAbn1j1wCGQOTQV8VYE18fkb583v0Zwy80b</value>
+  </data>
+  <data name="_Seasons_P_GetSeason_7_" xml:space="preserve">
+    <value>OSVSXxwAAAD2OQQoCMQxFrxJyAMW9I7gRVyLOgEvJtEGDnXZIOko9vXVEl+/n/0fWR00jay7gS6RBXFdGbvCXItSw8mUkpWGF4CiemHyDOwrGM59Vcq10OlXO87wtlnlYtFklXhEoCNlhFhmTpYhgtzQF37JKPb7473uISS9BcmlwG55UbC/e82eRJnW1iNCH5O6fP79KhOXmDQ==</value>
+  </data>
+  <data name="_Seasons_P_GetSeason_8_" xml:space="preserve">
+    <value>OSVSXxAAAAEWOywoCMQxFf6XkAxRcO4IbcSXiDLiUTBs02BdpR6lfbxwRl+fk3kvWR0mZpDbjWsTAdmiZOvhZMCqVLxkFwwqMxXgidB0MMtGMZ+GqiR36oqLO9b6VSmHRV+F4BYOesRzmoVCUyy1N3vUkrJfXv/zgwiN7rq2DrX9iK3t2jqI20iRWg2BGn+z98+R3D8xy8wY=</value>
+  </data>
+  <data name="_Seasons_P_GetSeason_9_" xml:space="preserve">
+    <value>OSVSXwAAAAFWOwQ7CMAxDf6XKB8APUE6II6BtgnPWBhHRtVPTIpWvJwztwNH2s+XdJaeZcmnGt4gTu6HNZGF1waipuiOpoYBxGDtCb2HIlRZ5y1xo1WUp900KTZtrYg8GA6Oc/kbkkWrwPWXW8K3BEYNo+8XCIwcuzcKB7qjwOSqeanZKgRlDcs/vwd8emO3+Aw==</value>
+  </data>
+  <data name="_Seasons_P_GetSeason_10_" xml:space="preserve">
+    <value>OSVSXwwAAADWOywoCMQxFf6XkAxRcO4IbcSXiDLiUTBs02BdpR6lfbxyZ5Tm595LtWVImqc24FjGwHVqmDhYLRqXyLaNg2ICxGC+EroNBJprxKlxp4Tq3+1YqhVVfheMdDHrGcpp3QlEujzR515OwXj5qD+iLll9ceGTPtXWw929s5cjOUdRGmsRqEMzok33+fvzvgVnvvg==</value>
+  </data>
+  <data name="_Seasons_P_GetSeason_11_" xml:space="preserve">
+    <value>OSVSXBAEAAF2PyQ7CMAxEfyXyB1C4N5W4sEgsh1ZcUdpEYJGlihNQ/p604VJunjcej1yfVXg6yWSywuDQpVFxKAxYRlntXedOolcamNAo6PJP30jYo8aQOGz1RyQ6oJTKAiMX/ZCXgfXaDa/pekkD8ypEb0tfmygos7o5lNDUo/DC/Lrvs9gsmg09gM18kW6DR5sdpKPl0PmopvkaA4ed0JTV6AgDuuyugVVNXZU/my8=</value>
+  </data>
+  <data name="_Seasons_P_GetSeason_12_" xml:space="preserve">
+    <value>OSVSXwwAAADWOywoCMQxFf6XkAxT3juBGXIk4Ay4l0wYN9kXaUerXG0dmeU7uvWR7lpRJajOuRQxsh5apg8WCUal8yygYNmAsxguh62CQiWa8CldauM7tvpVKYdVX4XgHg56xnOadUJTLI03e9SSsl4/aA/qi5RcXHtlzbR3s/RtbObJzFLWRJrEaBDP6ZJ+/H/97YNa7Lw==</value>
+  </data>
+  <data name="_Seasons_P_GetSeason_13_" xml:space="preserve">
+    <value>OSVSXlAAAAF2NMQ4CMQwEv2L5AfABDokKCqDhRO8klrDIxSjOgfx7gtJR7mh3Z3fh9tAEyQstEmd/8YSDIXTU01FnPVPgjEBZyK7/9C0mQbI0n/CQP+R2kpS4IJiuNfYyQsgan7/3sUao3NZahu/m1njZ3FW6dLv/Ag==</value>
+  </data>
+  <data name="_Seasons_P_GetSeason_14_" xml:space="preserve">
+    <value>OSVSXUAEAALWQ3WoCMRCFXyUEvKz1typ0C/4tSMGKu+BNocwmUzo0myzJbDF9+katvoE3A+fMgfNxnnfeNeg5Ch0t1KTK2GAmr64UyUz6o6jB8yvGzgGruYaG0T9MV+NRr7/OZ7Ppsp+P30uoDBaomJz9f+bzp8li0RsOOhur8Xi5UiiwewSdyRxMwLM+eOJUVPo2aT5DFDEw1t2N5eFACjAEYXsPmvDlWqML9JQ6fvFG9UOBKjLEMZMr/ITW8JtNcdd6lVJSVMap79NgFywpHl/+AA==</value>
+  </data>
+  <data name="_Seasons_P_GetSeason_15_" xml:space="preserve">
+    <value>OSVSXWwEAAKWQMQ7CMAxFrxL5ABT2pgMCJAbo0F7AaQNYpEmVOJVye9KWpaxs/v/7+0kub5pfrhd9sjhQ16ZRS1g9ENnK6jyhicgaBBrCcP8xJwqkyBAnCSf9wGi4tiCCi77LiyCUcd17Prw2QXjN0dsV1aTAetgdnTMaLVTliB6HLxk3yKyWcFNs2JN9gqBwtRJaH/U815ElXNCErEYXiMnldA+i2ALUBqD+BRwWQLG+r/oA</value>
+  </data>
+  <data name="_Seasons_P_GetSeason_16_" xml:space="preserve">
+    <value>OSVSXxAAAAFWOQQrCQAxFrzLkAHoB60LEpUpbcJ3ORAymnTKZEcbTGysiLv/P+49szinOlHJ1oU44su/rTA18W3BWWm5Ji2RwHqeWMDTQp0JLvCTOBhxQ1Iq8rLuqmcbVLkYhnMChMOrxT6S3WCR0lNiOz5/gwcoDC+fawJ6uaPDJDBpL8kaBGyT6+/vJjw/cevsC</value>
+  </data>
+  <data name="_Seasons_P_GetSeason_17_" xml:space="preserve">
+    <value>OSVSXwQAAAE2OSwoCMQxAr1JyAL2AdSHiUsUZdJ1pIwYz7dCPUE9v/Ay4fC/JI6tjihOl0oxvAUd2fZvIwmzBqFQ+o1QC4zCcCL2FPv3wkrjQzOVz27VcaFxsYhTCAAaFMe//M/kWq/iOEuvsqX6HktU/OPPAwqVZ2NIVq5SDBnKsyekWmEGiu78//ObALNcv</value>
+  </data>
+  <data name="_Seasons_P_GetSeason_18_" xml:space="preserve">
+    <value>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</value>
+  </data>
+</root>

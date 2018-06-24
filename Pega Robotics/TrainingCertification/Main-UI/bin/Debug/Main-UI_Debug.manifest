@@ -1,0 +1,8 @@
+<DeploymentManifest version="5.0">
+  <CompositeStudioProject name="Main_UI" fileName="Main_UI.dll" assemblyName="Main_UI.dll" id="Project-8D5D56BE6C15C4D" version="8.0.1089.0" deploymentVersion="1.0" configuration="" createdWith="Build" obfuscated="False" runtime="True" digest="DD32F203A89D69E1D8FA22BADD6F26">
+    <Assemblies>
+      <Assembly value="Main_UI.dll" digest="43EECFF50F40C1EF90FC6C91DBA577" />
+      <Assembly value="Main_UI.pdb" digest="3A209AE7BB9C5DE7C09931154FB45E" />
+    </Assemblies>
+  </CompositeStudioProject>
+</DeploymentManifest>

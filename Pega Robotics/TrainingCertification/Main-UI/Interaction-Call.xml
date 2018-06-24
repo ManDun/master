@@ -1,0 +1,249 @@
+﻿<Interaction Name="Call" xmlns:json='http://james.newtonking.com/projects/json'>
+
+	<!--	The Context section defines what information is stored about an interaction. Property values are set and
+	        retrieved via the InteractionManager component. Defining a context incudes defining these values:
+			
+			Name - Used to identify the property in automations and in the plug-in configuration.
+			Type - Specifies the property's underlying data type. Supported types include: String, Number, Boolean, and Date. 
+			Default - Use this property to specify a default value. The property is populated with this value when an 
+			   interaction is created.
+			-->
+
+	<Context>
+		<Value Name="AcctNum" Type="String" Default="10000" />
+		<Value Name="Name" Type="String" Default="[No Active Call]" />
+		<Value Name="Address" Type="String" Default="xxxx"/>		
+		<Value Name="City" Type="String" Default="xxxx"/>
+		<Value Name="State" Type="String" Default="xxxx"/>
+		<Value Name="ZipCode" Type="String" Default="xxxx"/>
+		<Value Name="NearestStore" Type="String" Default="xxxx"/>
+	</Context>
+
+	<!--	An Activity describes a piece of work that needs to done. An automation can request for activity to be performed
+	        or perform and activity when requested. Activities are queued and run sequetially. Only one activity can be processed
+			at a time. Any automation can request for an activity to be peformed by calling Activity.StartActivity().  
+			The activity is placed at the bottom of the queue and is processing when the activities higher in the queue are 
+			completed. An activity is completed when all automations that are listening to Activity.ActivityStarted have completed
+			their execution.
+
+            Name – Provides a descriptive name of an activity.
+            Value – Specifies the parameters and properties of an activity.
+            Type – Specifies the type of the Value, such as Boolean or String.
+			 
+			In the example below the Close Account activity will have a StartActivity() method with 
+			two parameters: CustomerId and Effective Date.
+			There will also be an ActivityStarted event with CustomerId and EffectiveDate outputs.
+			Additionally, an activity component for Close Account will have a CustomerId property
+			and an EffectiveDate property. These property values can be set or retrieved during the execution
+			of the activity or in response to the ActivityCompleted event.
+			
+			<Activity Name="Close Account">
+				<Value Name="CustomerId" Type="String" />
+				<Value Name="EffectiveDate" Type="Date" />
+			</Activity>
+
+			When defining an activity, make sure that all of the information required to perform the
+			activity is available through context values or the Activity properties.
+			-->
+
+	<Activities>
+		<Activity Name="GetCustomerInformation">
+		</Activity>
+		<Activity Name="Update Display">
+		</Activity>
+		<Activity Name="SaveAddress">
+		</Activity>
+		<Activity Name="Answer Call">
+			<Value Name="BI_Initiated" Type="Boolean" />
+		</Activity>
+	</Activities>
+
+	<!--  Plug-ins are HTML user interface sections in the toolbar. Agile Desktop includes these plug-ins:
+			- 360 View - Provides access to key customer information at a glance.
+			- Notes - Lets you add notes and search historic notes.
+			- Shortcuts - Provides buttons to launch an exe, go to a web site, execute an automation
+			     or start an activity.
+
+          GENERIC PLUG-IN SETTINGS
+
+				Plugin:isActive - Indicates if the plug-in appears in the toolbar.
+				Plugin:hasExtendedView - Indicates if the plug-in can be expanded to show more information.
+				Plugin:enableWithNoActiveInteraction - Indicates if the user can interact with the plug-in when 
+				   there is no active interaction.
+				Plugin:canHide - If false, the user cannot hide the plug-in from the gear menu.
+				Plugin/Section - Provides a logical grouping of the elements that comprise the plug-in.
+				Plugin/Section:visibility - You can choose from these options:
+				   Primary - The section is added to the Primary view.
+				   Extended - The section is added to the Extended view.
+				   Both - The section is added to both the Primary and Extended views.
+                -->
+
+	<Plugins>
+
+		<!--    360 View - This plug-in displays interaction context values that may be needed at a glance.
+				
+			PLUG-IN SPECIFIC SETTINGS
+
+				Plugin/Section name - Indicates the type of styling to use for the section. You can choose from these styles:
+					Identity, Ratings, Custom, Balances, Eligibility, or Information.
+				Plugin/Section/Item:Name - Specifies the name of the plug-in.
+				Plugin/Section/Item/Context:Name - The name of context value (defined in the Context section) used to populate
+					this item. As the associated context property value changes, this item is automatically updated.
+				Plugin/Section/Item/Label - Defines the text label that appears to left of the value in the toolbar. If omitted,
+				    the Name value is used.
+				-->
+
+		<Plugin name="360AppBar" isActive="true" hasExtendedView="true" canHide="true" enableWithNoActiveInteraction="false" Label="360 View">
+			<section name="Identity" Visibility="Primary">
+				<Item name="FullName">
+					<Context Name="Name" />
+					<Label></Label>
+				</Item>
+			</section>			
+			<section name="Products" Visibility="Primary">
+				<Item name="AccountNumber">
+					<Context Name="AcctNum" />
+					<Label>Account Number</Label>				
+				</Item>
+			</section>
+			<section name="Balances" Visibility="Extended">
+				<Item name="Address">
+					<Context Name="Address" />
+					<Label>Address</Label>
+				</Item>
+			    <Item name="City">
+					<Context Name="City" />
+					<Label>City</Label>
+				</Item>
+				<Item name="State">
+					<Context Name="State" />
+					<Label>State</Label>
+				</Item>
+				<Item name="Zipcode">
+					<Context Name="Zipcode" />
+					<Label>Zipcode</Label>				
+				</Item>
+			</section>
+		</Plugin>
+
+		<!--    NOTES - This plug-in lets you add predefined notes, manually enter notes, and review the historical notes for
+			an interaction. The name of this plug-in is Notes.
+				
+			PLUG-IN SPECIFIC SETTINGS
+
+				section/Item:Name - Name of the item to add to the plug-in.
+				section/Item/Context:Name - The name of context value (defined in the Context section) used to 
+				   populate this item. As the associated context property value changes, this item is automatically updated.
+				section/Item/Label - Defines the text label that appears to left of the value in the toolbar. If omitted,
+				   the Name value is used.
+				-->
+
+		<Plugin name="Notes" isActive="true"  hasExtendedView="true"  canHide="true" enableWithNoActiveInteraction="false">
+			<section name="NoteTemplates" Visibility="None" >
+				<Item name="CallStarted" isActive="true" >
+					<Content>Call with {{Name}} started</Content>
+				</Item>
+				<Item name="InformDueAmount" isActive="true">
+					<Content>Informed of {{TotalDue}} due amount</Content>
+				</Item>
+				<Item name="Hided Note" isActive="false">
+					<Content>This is hide</Content>
+				</Item>
+				<Item name="Note With Activity" isActive="true">
+					<Content>Note added with the validate caller activity</Content>
+					<Activity>ValidateCaller</Activity>
+				</Item>
+			</section>
+			<config>
+				<TimeZone>GMT-5</TimeZone>
+				<MaxNotesToReturn>100</MaxNotesToReturn>
+				<MaxDaysToReturn>365</MaxDaysToReturn>
+				<LineBreak>\r\n</LineBreak>
+			</config>
+		</Plugin>
+
+		<!--    SHORTCUTS - This plug-in provides shortcut buttons for calling an automation, going to a web page,
+			starting an executable, or starting an activity.
+				
+			PLUG-IN SPECIFIC SETTINGS
+
+				Plugin/Label - Use to define the heading text that appears for this section. The default is Quick Links.
+				Plugin/config/Layout- Use to define the number of columns in which shortcuts are displayed (2 or 3).
+				Plugin/Section/Name - Specifies the name of shortcut section. This description does not appear in the Agile Desktop UI.
+				Plugin/Section/Item:Name - Enter the text you want to appear on the shortcut button.
+				Plugin/Section/Item:ShortcutType - Indicates type of shortcut. Choose from these options:
+					* Activity - Starts an activity.
+					* Url - Navigates to a web page.
+					* External - Starts an executable.
+					* Automation - Starts an automation.
+				Plugin/Section/Item:ActivityName - For Activity shortcuts, enter the name of the activity pressing the button should start.
+				Plugin/Section/Item:Target - Enter the destination for the shortcut. For instance, if the shortcut is a web site, you enter 
+				    the URL. If the shortcut launches an executable file, enter the name of that file.
+				Plugin/Section/Item:Project - For automation shortcuts, enter the name of the project that will run the automation.
+		        -->
+
+		<Plugin name="Shortcuts" isActive="true"  hasExtendedView="false" canHide="true" enableWithNoActiveInteraction="false" Label="Shortcut">
+			<config>
+				<Layout>2</Layout>
+			</config>
+			<section name="Links" Visibility="Primary" >
+				<Item Name="OpenSpan Web Site" ShortcutType="Url" Target="http://www.openspan.com/"/>
+			</section>
+			<section name="Launch"  Visibility="Primary">
+			<Item Name="Notepad" Target="Notepad" ShortcutType="External"/>
+			</section>
+			<section name="Tabs"  Visibility="Primary" >
+				<Item Name="CRM" ShortcutType="Tab" Target="TabName"/>
+			</section>
+		</Plugin>
+		
+		<!--    InteractionManager - This plug-in displays a list from which you can select the active interaction. close an
+			interaction, and optionally start an interaction. 
+				
+			PLUG-IN SPECIFIC SETTINGS
+
+				Section/Item/Context Name - Enter the context property you want to use in the list from which the end user will
+				   select an active interaction. For instance, if there is a context property named ClientFullName and you want your
+				   end users to select an interaction based on the client's name, you would enter ClientFullName here.
+				config/EnableStartInteraction - Enter True if you want to show a plus (+) button to let the user manually start an
+				   interaction.
+				-->
+
+		<Plugin name="InteractionManager" isActive="false" showOn="360AppBar">
+			<section name="selector" Visibility="Primary">
+				<Item name="InteractionName" >
+					<Context Name="Name" />
+					<Label/>
+				</Item>
+			</section>
+			<config>
+				<EnableStartInteraction>true</EnableStartInteraction>
+			</config>
+		</Plugin>
+
+		<!--    StartInteraction - This plug-in displays a modal dialog inside the plug-in that lets you start a new interaction.
+				
+			PLUG-IN SPECIFIC SETTINGS
+
+				enableWithNoActiveInteraction - Enter True if you want to display the StartInteraction dialog when no 
+				   interactions exist.
+				config/label - Enter the text you want to appear on the dialog's heading  This text should describe what the 
+				   user needs to do to start a new interaction, such as Enter Claim Number.
+				config/project - Enter the name of the OpenSpan project that contains the automation which starts a new 
+				   interaction.
+				config/automation - Enter the name of the automation which starts a new interaction. This automation can validate 
+				   user input and initiate a new interaction by calling InteractionManager.StartInteraction().
+				config/defaultErrorMessage - Enter the text of the message you want to display if an error occurs while starting
+				   an interaction and the start interaction automation does not return error text.
+				-->
+
+		<Plugin name="StartInteraction" isActive="false" enableWithNoActiveInteraction="true">
+			<config>
+				<label>Enter Claim Number</label>
+				<project>AgileDesktopTest</project>
+				<automation>StartInteraction</automation>
+				<defaultErrorMessage>Unable to start interaction</defaultErrorMessage>
+			</config>
+		</Plugin>
+	</Plugins>
+</Interaction>

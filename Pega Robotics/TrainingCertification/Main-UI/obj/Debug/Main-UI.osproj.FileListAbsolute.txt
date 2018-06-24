@@ -1,0 +1,7 @@
+E:\Pega\Robotic Automation\Workspace\TrainingCertification\Main-UI\bin\Debug\RuntimeConfig.xml
+E:\Pega\Robotic Automation\Workspace\TrainingCertification\Main-UI\bin\Debug\Main_UI.dll
+E:\Pega\Robotic Automation\Workspace\TrainingCertification\Main-UI\bin\Debug\Main_UI.pdb
+E:\Pega\Robotic Automation\Workspace\TrainingCertification\Main-UI\obj\Debug\ImportTypeMap.resources
+E:\Pega\Robotic Automation\Workspace\TrainingCertification\Main-UI\obj\Debug\Main-UI.osproj.GenerateResource.Cache
+E:\Pega\Robotic Automation\Workspace\TrainingCertification\Main-UI\obj\Debug\Main_UI.dll
+E:\Pega\Robotic Automation\Workspace\TrainingCertification\Main-UI\obj\Debug\Main_UI.pdb

@@ -1,0 +1,8 @@
+<DeploymentManifest version="5.0">
+  <CompositeStudioProject name="InternetAuto" fileName="InternetAuto.dll" assemblyName="InternetAuto.dll" id="Project-8D4B02D7557AC19" version="8.0.1016.0" deploymentVersion="1.0" configuration="" createdWith="Build" obfuscated="False" runtime="True" digest="EE2F86D5A999C4BF110AD4F4BEF29A">
+    <Assemblies>
+      <Assembly value="InternetAuto.dll" digest="D835486CE3095F5DDBEAECD46F420B" />
+      <Assembly value="InternetAuto.pdb" digest="A7AED72D5BC674C8EECD6A5660D7BE" />
+    </Assemblies>
+  </CompositeStudioProject>
+</DeploymentManifest>

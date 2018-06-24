@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Pega Robotics Studio Solution File, Format Version 11.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{B45C44CD-E95B-43EF-AF7C-4D25776FBF5E}") = "InternetAuto", "InternetAuto\InternetAuto.osproj", "{0107743E-0543-487E-BB7A-D8A18827516D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0107743E-0543-487E-BB7A-D8A18827516D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0107743E-0543-487E-BB7A-D8A18827516D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0107743E-0543-487E-BB7A-D8A18827516D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0107743E-0543-487E-BB7A-D8A18827516D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
