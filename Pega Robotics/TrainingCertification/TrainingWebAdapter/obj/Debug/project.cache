@@ -42,6 +42,7 @@
     <DesignComponent id="Automator-8D5CFEBA5E2E063" className="ACME_P_NavToHome" type="Automation" isPublic="True" screenShots="" />
     <DesignComponent id="Automator-8D5CFF099591738" className="ACME_P_SearchByZip" type="Automation" isPublic="True" screenShots="" />
     <DesignComponent id="Automator-8D5CFED6DAF1ACA" className="ACME_P_SignIn" type="Automation" isPublic="True" screenShots="" />
-    <DesignComponent id="Automator-8D5D57020FF5A6A" className="_ACME_GC" type="Automation" isPublic="True" screenShots="" />
+    <DesignComponent id="DesignForm-8D5CFEA0F641740" className="frmTest" type="WinForm" isPublic="True" screenShots="" />
+    <DesignComponent id="GlobalContainer-8D5DB4F32F81FCB" className="_ACME_GC" type="GlobalContainer" isPublic="True" screenShots="" />
   </DesignComponents>
 </Cache>

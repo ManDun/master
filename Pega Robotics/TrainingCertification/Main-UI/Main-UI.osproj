@@ -74,6 +74,10 @@
       <Private>False</Private>
       <HintPath>$(OPENSPAN_APPLICATION_PATH)\OpenSpan.Automation.dll</HintPath>
     </Reference>
+    <Reference Include="OpenSpan.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=f5db91edc02d8c5e">
+      <HintPath>$(OPENSPAN_APPLICATION_PATH)\OpenSpan.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="OpenSpan.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=f5db91edc02d8c5e">
       <HintPath>$(OPENSPAN_APPLICATION_PATH)\OpenSpan.Controls.dll</HintPath>
       <Private>False</Private>
@@ -84,6 +88,10 @@
     </Reference>
     <Reference Include="OpenSpan.Interactions.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=f5db91edc02d8c5e">
       <HintPath>$(OPENSPAN_APPLICATION_PATH)\OpenSpan.Interactions.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OpenSpan.NativeInterop, Version=8.0.0.0, Culture=neutral, PublicKeyToken=f5db91edc02d8c5e">
+      <HintPath>$(OPENSPAN_APPLICATION_PATH)\OpenSpan.NativeInterop.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System">
@@ -111,6 +119,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Events" />
+    <Folder Include="Events\Interactions" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +131,10 @@
     <Compile Include="CustomerInformation.os">
       <SubType>Component</SubType>
       <Id>DesignForm-8D5D56BF1483106</Id>
+    </Compile>
+    <Compile Include="Events\Interactions\Main_E_IntMgr_InteractionStarted.os">
+      <SubType>Component</SubType>
+      <Id>Automator-8D5DB4FE6F63C3F</Id>
     </Compile>
     <Compile Include="_Main_GC.os">
       <SubType>Component</SubType>
