@@ -3,6 +3,7 @@ import tensorflow as tf
 import os
 import skimage
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 def try1():
@@ -153,6 +154,7 @@ def load_data(data_directory):
                    if os.path.isdir(os.path.join(data_directory, d))]
     labels = []
     images = []
+
     for d in directories:
         label_directory = os.path.join(data_directory, d)
         file_names = [os.path.join(label_directory, f)
@@ -172,9 +174,17 @@ images, labels = load_data(train_data_directory)
 images = np.array(images)
 labels = np.array(labels)
 
+# Make a histogram with 62 bins of the `labels` data
+plt.hist(labels, 62)
+
+# Show the plot
+plt.show()
+
 # Print the `images` dimensions
 print(images.ndim)
-print(labels.ndim)
+print(images.flags)
+print(images.itemsize)
+print(images.nbytes)
 
 # Print the number of `images`'s elements
 print(images.size)
