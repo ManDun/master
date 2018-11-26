@@ -165,30 +165,47 @@ def load_data(data_directory):
             labels.append(int(d))
     return images, labels
 
-ROOT_PATH = "E:\\Python\\Workspace\\ProjectX"
-train_data_directory = os.path.join(ROOT_PATH, "BelgiumTSC_Training\\Training")
-test_data_directory = os.path.join(ROOT_PATH, "BelgiumTSC_Testing\\Testing")
 
-images, labels = load_data(train_data_directory)
+def run_load_data():
 
-images = np.array(images)
-labels = np.array(labels)
+    ROOT_PATH = "E:\\Python\\Workspace\\ProjectX"
+    train_data_directory = os.path.join(ROOT_PATH, "BelgiumTSC_Training\\Training")
+    test_data_directory = os.path.join(ROOT_PATH, "BelgiumTSC_Testing\\Testing")
 
-# Make a histogram with 62 bins of the `labels` data
-plt.hist(labels, 62)
+    images, labels = load_data(train_data_directory)
 
-# Show the plot
-plt.show()
+    images = np.array(images)
+    labels = np.array(labels)
 
-# Print the `images` dimensions
-print(images.ndim)
-print(images.flags)
-print(images.itemsize)
-print(images.nbytes)
+    # Make a histogram with 62 bins of the `labels` data
+    #plt.hist(labels, 62)
 
-# Print the number of `images`'s elements
-print(images.size)
-print(labels.size)
+    # Show the plot
+    #plt.show()
 
-# Print the first instance of `images`
-images[0]
+    # Print the `images` dimensions
+    print(images.ndim)
+    print(images.flags)
+    print(images.itemsize)
+    print(images.nbytes)
+
+    # Print the number of `images`'s elements
+    print(images.size)
+    print(labels.size)
+
+    # Determine the (random) indexes of the images that you want to see
+    traffic_signs = [300, 2250, 3650, 4000]
+
+    # Fill out the subplots with the random images that you defined
+    for i in range(len(traffic_signs)):
+        plt.subplot(1, 4, i + 1)
+        plt.axis('off')
+        plt.imshow(images[traffic_signs[i]])
+        plt.subplots_adjust(wspace=0.5)
+
+        plt.show()
+        print(f"shape: {images[traffic_signs[i]].shape}, min: {images[traffic_signs[i]].min()}, "
+              f"max: {images[traffic_signs[i]].max()}")
+
+
+run_load_data()
