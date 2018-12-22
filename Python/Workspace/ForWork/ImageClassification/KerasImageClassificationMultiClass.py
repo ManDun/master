@@ -26,7 +26,9 @@ class Classify1:
 
     img_shape = 50
 
-    no_of_classes = 0
+    no_of_classes = 5
+
+    files = []
 
     # Load all images into np array
     def prepare_data(self, dir):
@@ -68,6 +70,45 @@ class Classify1:
             print(f'Error preparing file: {e}')
 
         return images, labels
+
+    def prepare_check_data(self, dir):
+        images = []
+
+        try:
+            self.allLabels = os.listdir(dir)
+            directories = [d for d in os.listdir(dir) if os.path.isdir(os.path.join(dir, d))]
+
+            for d in directories:
+                label_directory = os.path.join(dir, d)
+                if not os.listdir(label_directory):
+                    self.allLabels.remove(d)
+
+            self.prepare_labels()
+            self.no_of_classes = len(self.allLabels)
+            print(self.allLabels)
+
+            for d in self.allLabels:
+                label_directory = os.path.join(dir, d)
+
+                file_names = [os.path.join(label_directory, f) for f in os.listdir(label_directory) if
+                              f.endswith('.jpg' or '.jpeg')]
+
+                for f in file_names:
+                    if os.path.getsize(f) > 0:
+                        try:
+                            img = cv2.imread(f, cv2.IMREAD_GRAYSCALE)
+                            img = cv2.resize(img, (self.img_shape, self.img_shape))
+                            images.append(img)
+                            self.files.append(f)
+
+                        except Exception as e:
+                            # print(f'Error reading file {f}: {e}')
+                            pass
+
+        except Exception as e:
+            print(f'Error preparing file: {e}')
+
+        return images, self.allLabels
 
     # Prepare labels array
     def prepare_labels(self):
@@ -133,12 +174,13 @@ class Classify1:
 
         # Create figure with 3x3 sub-plots.
         fig, axes = plt.subplots(3, 3)
-        fig.subplots_adjust(hspace=0.3, wspace=0.3)
+        fig.subplots_adjust(hspace=1, wspace=1)
 
         for i, ax in enumerate(axes.flat):
             # Plot image.
-            ax.imshow(images[i].reshape(self.img_shape, self.img_shape, 1), cmap='binary')
-
+            #ax.imshow(images[i].reshape(self.img_shape, self.img_shape, 1))
+            ax.imshow(images[i])
+            print(cls_true[i])
             # Show true and predicted classes.
             if cls_pred is None:
                 xlabel = "True: {0}".format(cls_true[i])
@@ -162,33 +204,40 @@ test_dir = '../../ipynb/datasets/art/validation_set'
 
 c = Classify1()
 
-train_images, train_labels = c.prepare_data(train_dir)
-print(train_labels)
+#train_images, train_labels = c.prepare_data(train_dir)
 
-test_images, test_labels = c.prepare_data(test_dir)
-print(test_labels)
+#test_images, test_labels = c.prepare_data(test_dir)
 
-X = np.array([i for i in train_images]).reshape(-1, 50, 50, 1)
-Y = [i for i in train_labels]
+#X = np.array([i for i in train_images]).reshape(-1, 50, 50, 1)
+#Y = [i for i in train_labels]
 
-test_x = np.array([i for i in test_images]).reshape(-1, 50, 50, 1)
-test_y = [i for i in test_labels]
+#test_x = np.array([i for i in test_images]).reshape(-1, 50, 50, 1)
+#test_y = [i for i in test_labels]
 
 model = c.build_model()
-model.fit({'input': X}, {'targets': Y}, n_epoch=50, validation_set=({'input': test_x}, {'targets': test_y}),
-    snapshot_epoch=True, show_metric=True, run_id='Run1')
+#model.fit({'input': X}, {'targets': Y}, n_epoch=50, validation_set=({'input': test_x}, {'targets': test_y}),
+    #snapshot_epoch=True, show_metric=True, run_id='Run1')
 
-model.save('run2312')
+#model.save('run2312')
+model.load('run2312')
 
-rand_images = np.random.randint(len(test_images), size=9)
+check_dir = '../../ipynb/datasets/art/CheckResults/validation_set'
+
+check_images, filenames = c.prepare_check_data(check_dir)
+X = np.array(check_images)
+
+rand_images = np.random.randint(len(X), size=9)
+#rand_images = [10]
 
 # Get the first images from the test-set.
 images = []
 cls_true = []
 
 for i in rand_images:
-    images.append(test_images[i])
-    cls_true.append(c.get_text_label(test_labels[i]))
+    images.append(check_images[i])
+    cls_true.append(filenames[np.argmax(model.predict(X[i].reshape(-1, 50, 50, 1)))])
+
+
 
 # Plot the images and labels using our helper-function above.
 c.plot_images(images=images, cls_true=cls_true)
