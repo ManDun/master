@@ -1,5 +1,4 @@
-import tensorflow as tf
-from tensorflow import keras
+
 import numpy as np
 import os
 import matplotlib.pyplot as plt
@@ -8,6 +7,7 @@ import tflearn
 from tflearn.layers.conv import conv_2d, max_pool_2d
 from tflearn.layers.core import input_data, dropout, fully_connected
 from tflearn.layers.estimator import regression
+import pandas as p
 
 
 class Classify1:
@@ -24,13 +24,15 @@ class Classify1:
     # Possible labels in array
     rLabels = []
 
+    # Image Shape
     img_shape = 50
 
+    # No of labels/classes
     no_of_classes = 5
 
     files = []
 
-    # Load all images into np array
+    # Load all images and labels into np array
     def prepare_data(self, dir):
 
         images = []
@@ -71,8 +73,10 @@ class Classify1:
 
         return images, labels
 
+    # Prepare data that needs to be checked, returns images and unique labels with file names
     def prepare_check_data(self, dir):
         images = []
+        filenames = []
 
         try:
             self.allLabels = os.listdir(dir)
@@ -100,6 +104,7 @@ class Classify1:
                             img = cv2.resize(img, (self.img_shape, self.img_shape))
                             images.append(img)
                             self.files.append(f)
+                            filenames.append(f)
 
                         except Exception as e:
                             # print(f'Error reading file {f}: {e}')
@@ -108,7 +113,7 @@ class Classify1:
         except Exception as e:
             print(f'Error preparing file: {e}')
 
-        return images, self.allLabels
+        return images, self.allLabels, filenames
 
     # Prepare labels array
     def prepare_labels(self):
@@ -169,6 +174,7 @@ class Classify1:
 
         return model
 
+    # Plot images hard coding the layout as 9 images
     def plot_images(self, images, cls_true, cls_pred=None):
         assert len(images) == len(cls_true) == 9
 
@@ -178,7 +184,8 @@ class Classify1:
 
         for i, ax in enumerate(axes.flat):
             # Plot image.
-            #ax.imshow(images[i].reshape(self.img_shape, self.img_shape, 1))
+            # ax.imshow(images[i].reshape(self.img_shape, self.img_shape, 1))
+            # No need to resize
             ax.imshow(images[i])
             print(cls_true[i])
             # Show true and predicted classes.
@@ -198,46 +205,69 @@ class Classify1:
         # in a single Notebook cell.
         plt.show()
 
+def _commented_():
 
-train_dir = '../../ipynb/datasets/art/training_set'
-test_dir = '../../ipynb/datasets/art/validation_set'
+    train_dir = '../../ipynb/datasets/art/training_set'
+    test_dir = '../../ipynb/datasets/art/validation_set'
 
-c = Classify1()
+    c = Classify1()
 
-#train_images, train_labels = c.prepare_data(train_dir)
+    # Prepare training data
+    #train_images, train_labels = c.prepare_data(train_dir)
 
-#test_images, test_labels = c.prepare_data(test_dir)
+    # Prepare validation data
+    #test_images, test_labels = c.prepare_data(test_dir)
 
-#X = np.array([i for i in train_images]).reshape(-1, 50, 50, 1)
-#Y = [i for i in train_labels]
+    # Reshape inputs and outputs
+    #X = np.array([i for i in train_images]).reshape(-1, 50, 50, 1)
+    #Y = [i for i in train_labels]
 
-#test_x = np.array([i for i in test_images]).reshape(-1, 50, 50, 1)
-#test_y = [i for i in test_labels]
+    # Reshape validation data
+    #test_x = np.array([i for i in test_images]).reshape(-1, 50, 50, 1)
+    #test_y = [i for i in test_labels]
 
-model = c.build_model()
-#model.fit({'input': X}, {'targets': Y}, n_epoch=50, validation_set=({'input': test_x}, {'targets': test_y}),
-    #snapshot_epoch=True, show_metric=True, run_id='Run1')
+    model = c.build_model()
 
-#model.save('run2312')
-model.load('run2312')
+    # Comment model as its already saved, uncomment to build
+    #model.fit({'input': X}, {'targets': Y}, n_epoch=50, validation_set=({'input': test_x}, {'targets': test_y}),
+        #snapshot_epoch=True, show_metric=True, run_id='Run1')
 
-check_dir = '../../ipynb/datasets/art/CheckResults/validation_set'
+    # Commented save as loading from the saved and trained model
+    #model.save('run2312')
+    model.load('run2312')
 
-check_images, filenames = c.prepare_check_data(check_dir)
-X = np.array(check_images)
+    # Data to run classifier through
+    check_dir = '../../ipynb/datasets/art/CheckResults/validation_set'
 
-rand_images = np.random.randint(len(X), size=9)
-#rand_images = [10]
+    # Prepare data to be checked
+    check_images, labels, file_names = c.prepare_check_data(check_dir)
+    X = np.array(check_images)
 
-# Get the first images from the test-set.
-images = []
-cls_true = []
+    # Get random images to run through model
+    # rand_images = np.random.randint(len(X), size=9)
+    #rand_images = [10]
 
-for i in rand_images:
-    images.append(check_images[i])
-    cls_true.append(filenames[np.argmax(model.predict(X[i].reshape(-1, 50, 50, 1)))])
+    # Get the first images from the test-set.
+    images = []
+    cls_true = []
+
+    # Predict and store the results in array
+    for i in range(0, len(check_images)):
+        images.append(check_images[i])
+        cls_true.append(labels[np.argmax(model.predict(X[i].reshape(-1, 50, 50, 1)))])
+
+    # Plot the images and labels using our helper-function above.
+    #c.plot_images(images=images, cls_true=cls_true)
+
+    # Write the image file names into csv with classified result
+    def write_in_csv(csvFile):
+
+        raw_data = {'Names': file_names, 'Classified': cls_true}
+        csvData = p.DataFrame(raw_data, columns=['Names', 'Classified'])
+        csvData.to_csv(csvFile)
+
+    # Results CSV
+    csvFile = 'results.csv'
+    write_in_csv(csvFile)
 
 
-
-# Plot the images and labels using our helper-function above.
-c.plot_images(images=images, cls_true=cls_true)
