@@ -8,6 +8,7 @@ from tflearn.layers.conv import conv_2d, max_pool_2d
 from tflearn.layers.core import input_data, dropout, fully_connected
 from tflearn.layers.estimator import regression
 import pandas as p
+import datetime
 
 
 class Classify1:
@@ -28,9 +29,19 @@ class Classify1:
     img_shape = 50
 
     # No of labels/classes
-    no_of_classes = 5
+    no_of_classes = 0
 
     files = []
+
+    raw_data = ''
+
+    csv_file_name = 'details.csv'
+
+    keys = []
+
+    values = []
+
+    dates = []
 
     # Load all images and labels into np array
     def prepare_data(self, dir):
@@ -39,8 +50,8 @@ class Classify1:
         labels = []
 
         try:
-            self.allLabels = os.listdir(dir)
             directories = [d for d in os.listdir(dir) if os.path.isdir(os.path.join(dir, d))]
+            self.allLabels = directories
 
             for d in directories:
                 label_directory = os.path.join(dir, d)
@@ -52,9 +63,12 @@ class Classify1:
 
             for d in self.allLabels:
                 label_directory = os.path.join(dir, d)
+                print(f'Preparing images for {label_directory}')
 
                 file_names = [os.path.join(label_directory, f) for f in os.listdir(label_directory) if
-                              f.endswith('.jpg' or '.jpeg')]
+                              f.endswith(('.jpg', '.jpeg', '.png'))]
+
+                print(f'{len(file_names)} images inside')
 
                 for f in file_names:
                     if os.path.getsize(f) > 0:
@@ -71,6 +85,18 @@ class Classify1:
         except Exception as e:
             print(f'Error preparing file: {e}')
 
+        print(f'No of images: {len(images)} in {dir}')
+        print(f'Array Labels: {self.rLabels}, Text Labels: {self.allLabels}')
+        self.keys.append(f'Images in {dir}')
+        self.values.append(len(images))
+        self.dates.append(str(datetime.datetime.now().time().strftime('%H:%M:%S')))
+        self.keys.append('Array Labels')
+        self.values.append(self.rLabels)
+        self.dates.append(str(datetime.datetime.now().time().strftime('%H:%M:%S')))
+        self.keys.append('Text Labels')
+        self.values.append(self.allLabels)
+        self.dates.append(str(datetime.datetime.now().time().strftime('%H:%M:%S')))
+
         return images, labels
 
     # Prepare data that needs to be checked, returns images and unique labels with file names
@@ -79,23 +105,26 @@ class Classify1:
         filenames = []
 
         try:
-            self.allLabels = os.listdir(dir)
             directories = [d for d in os.listdir(dir) if os.path.isdir(os.path.join(dir, d))]
+            self.allLabels = directories
 
             for d in directories:
                 label_directory = os.path.join(dir, d)
                 if not os.listdir(label_directory):
                     self.allLabels.remove(d)
 
-            self.prepare_labels()
-            self.no_of_classes = len(self.allLabels)
-            print(self.allLabels)
+            #self.prepare_labels()
+            #self.no_of_classes = len(self.allLabels)
 
             for d in self.allLabels:
                 label_directory = os.path.join(dir, d)
 
+                print(f'Preparing images from {label_directory}')
+
                 file_names = [os.path.join(label_directory, f) for f in os.listdir(label_directory) if
-                              f.endswith('.jpg' or '.jpeg')]
+                              f.endswith(('.jpg', '.jpeg', '.png'))]
+
+                print(f'{len(file_names)} images inside')
 
                 for f in file_names:
                     if os.path.getsize(f) > 0:
@@ -113,12 +142,15 @@ class Classify1:
         except Exception as e:
             print(f'Error preparing file: {e}')
 
-        return images, self.allLabels, filenames
+        print(f'No of images: {len(images)} in {dir}')
+        print(f'No of files: {len(filenames)} in {dir}')
+        return images, filenames
 
     # Prepare labels array
     def prepare_labels(self):
 
         no_of_labels = len(self.allLabels)
+        self.rLabels = []
 
         for i in range(0, no_of_labels):
             rLabel = np.zeros((no_of_labels,), dtype=np.int)
@@ -133,13 +165,14 @@ class Classify1:
 
     # Prepare each label as np array
     def get_array_label(self, label):
+        #print(f'Fetching array labels for {label}')
         for i in range(0, len(self.rLabels)):
             if label == self.allLabels[i]:
                 return self.rLabels[i]
 
     # Build the classification model
     def build_model(self):
-        print(self.no_of_classes)
+        print(f'No of classes: {self.no_of_classes}')
         convnet = input_data(shape=[None, self.img_shape, self.img_shape, 1], name='input')
 
         convnet = conv_2d(convnet, 64, self.no_of_classes, activation='relu')
@@ -204,6 +237,15 @@ class Classify1:
         # Ensure the plot is shown correctly with multiple plots
         # in a single Notebook cell.
         plt.show()
+
+
+    # Write the image file names into csv with classified result
+    def save_details(self):
+
+        self.raw_data = {'Date': self.dates, 'Key': self.keys, 'Value': self.values}
+        csvData = p.DataFrame(self.raw_data, columns=['Date', 'Key', 'Value'])
+        csvData.to_csv(self.csv_file_name)
+
 
 def _commented_():
 
