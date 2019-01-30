@@ -1,0 +1,83 @@
+{% extends 'base.html'%}
+
+{% block content %}
+  <div class="jumbotron">
+  <h1 class="display-4">Adding a Rent</h1>
+  <p class="lead">Adding a bond to this system requires you to complete the following prerequisites</p>
+  <hr class="my-4">
+      <ul>
+          <li>Rent received</li>
+      </ul>
+
+  <p>If you think all the above conditions are met, please proceed by clicking Add below. You can also send alert through same process</p>
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+  Add
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Rent</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="tname">Tenant</label>
+          <select class="custom-select" id="tname">
+  <option selected>Tenant Name</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+          </div>
+
+  <div class="form-group">
+    <label for="ramount">Amount</label>
+    <input type="text" class="form-control" id="ramount" value="200">
+  </div>
+
+    <div class="form-group">
+    <label for="rdate">Paid Date</label>
+    <input type="text" class="form-control" id="rdate" placeholder="DD/MM/YYYY">
+  </div>
+    <div class="form-group">
+    <label for="rnextdue">Next Due Date</label>
+    <input type="text" class="form-control" id="rnextdue" placeholder="DD/MM/YYYY">
+  </div>
+
+    <div class="form-group">
+    <label for="rmode">Payment Mode</label>
+    <input type="text" class="form-control" id="rmode" placeholder="Cash">
+  </div>
+  <div class="form-group">
+    <div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="remailalert">
+  <label class="custom-control-label" for="remailalert">Email Alert</label>
+</div>
+    <div class="form-group">
+    <div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" disabled id="rsmsalert">
+  <label class="custom-control-label" for="rsmsalert">SMS Alert</label>
+</div>
+  </div>
+            <div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+</form>
+
+  </div>
+</div>
+</div>
+
+
+
+{% endblock %}
