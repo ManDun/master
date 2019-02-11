@@ -1,7 +1,0 @@
-,Date,Key,Value
-0,15:56:21,Images in ../datasets/walk-or-run/train,600
-1,15:56:21,Array Labels,"[array([1, 0]), array([0, 1])]"
-2,15:56:21,Text Labels,"['walk', 'run']"
-3,15:56:22,Images in ../datasets/walk-or-run/test,141
-4,15:56:22,Array Labels,"[array([1, 0]), array([0, 1])]"
-5,15:56:22,Text Labels,"['walk', 'run']"

@@ -31,5 +31,5 @@ print(np.argmax(predictions[0]))
 plt.imshow(x_test[0])
 plt.show()
 #
-# print(x_train[0])
+#print(x_train[0])
 

@@ -32,11 +32,12 @@ def catsdogs():
 training_data = []
 
 def loadtrainingdatapets():
-    DATADIR = 'Datasets\\PetImages'
+    DATADIR = 'Datasets/PetImages'
     CATEGORIES = ['Dog', 'Cat']
     for category in CATEGORIES:
         path = os.path.join(DATADIR, category)
         class_num = CATEGORIES.index(category)
+
         filenames = [os.path.join(path, img) for img in os.listdir(path) if img.endswith('.jpg')]
 
         for f in filenames:
@@ -44,6 +45,7 @@ def loadtrainingdatapets():
                 img_array = cv2.imread(f, cv2.IMREAD_GRAYSCALE)
                 new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE), interpolation = cv2.INTER_AREA)
                 training_data.append([new_array, class_num])
+                print(f)
 
             except Exception as e:
                 #print(e)
@@ -51,7 +53,7 @@ def loadtrainingdatapets():
 
 def loadtrainingdatasigns():
 
-    DATADIR = 'BelgiumTSC_Testing\\Testing'
+    DATADIR = 'Datasets\\Belgium TSC\\Testing'
     CATEGORIES = [d for d in os.listdir(DATADIR) if os.path.isdir(os.path.join(DATADIR, d)) ]
     for category in CATEGORIES:
         path = os.path.join(DATADIR, category)
@@ -71,7 +73,7 @@ def loadtrainingdatasigns():
 
 def trafficsigns():
 
-    DATADIR = 'BelgiumTSC_Testing\\Testing'
+    DATADIR = 'Datasets\\Belgium TSC\\Testing'
     CATEGORIES = os.listdir(DATADIR)
     for category in CATEGORIES:
         path = os.path.join(DATADIR, category)
