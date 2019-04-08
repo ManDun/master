@@ -26,7 +26,7 @@
     <DeploymentFiles>
     </DeploymentFiles>
     <CustomUpgradeVersion>0.0</CustomUpgradeVersion>
-    <InteractionConfigurationFile>E:\Pega\Robotic Automation\Workspace\TrainingCertification\Main-UI\Interaction-Call.xml</InteractionConfigurationFile>
+    <InteractionConfigurationFile>..\Interaction.xml</InteractionConfigurationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -215,7 +215,7 @@
     </Compile>
     <Compile Include="_ACME_GC.os">
       <SubType>Component</SubType>
-      <Id>Automator-8D5D57020FF5A6A</Id>
+      <Id>GlobalContainer-8D5DB4F32F81FCB</Id>
     </Compile>
   </ItemGroup>
   <ItemGroup>
