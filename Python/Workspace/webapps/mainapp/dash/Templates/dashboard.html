@@ -1,0 +1,115 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Tenants</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Rents</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contacts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="bond-tab" data-toggle="tab" href="#bond" role="tab" aria-controls="bond" aria-selected="false">Bonds</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Date started</th>
+      <th scope="col">Last Rent Paid</th>
+      <th scope="col">Next Due</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark Otto</td>
+      <td>11/04/2018</td>
+      <td>24/01/2019</td>
+      <td>05/02/2019</td>
+      <td>
+        <a class="btn btn-outline-danger" href="#" role="button">Remove</a>
+        <a class="btn btn-outline-primary" href="#" role="button">Rent Reminder</a>
+        <a class="btn btn-outline-primary" href="#" role="button">Rent Receipt</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Mark Otto</td>
+      <td>11/04/2018</td>
+      <td>24/01/2019</td>
+      <td>05/02/2019</td>
+      <td><a class="btn btn-outline-danger" href="#" role="button">Remove</a>
+      <a class="btn btn-outline-primary" href="#" role="button">Rent Reminder</a>
+      <a class="btn btn-outline-primary" href="#" role="button">Rent Receipt</a></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Mark Otto</td>
+      <td>11/04/2018</td>
+      <td>24/01/2019</td>
+      <td>05/02/2019</td>
+      <td><a class="btn btn-outline-danger" href="#" role="button">Remove</a>
+      <a class="btn btn-outline-primary" href="#" role="button">Rent Reminder</a>
+        <a class="btn btn-outline-primary" href="#" role="button">Rent Receipt</a></td>
+    </tr>
+  </tbody>
+</table>
+    <a class="btn btn-primary" href="{% url 'addtenant' %}" role="button">Add Tenant</a>
+  </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>
+        <a class="btn btn-outline-danger" href="#" role="button">Delete</a>
+        <a class="btn btn-outline-primary" href="#" role="button">Rent Receipt</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+      <td>
+        <a class="btn btn-outline-danger" href="#" role="button">Delete</a>
+        <a class="btn btn-outline-primary" href="#" role="button">Rent Receipt</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+      <td>
+        <a class="btn btn-outline-danger" href="#" role="button">Delete</a>
+        <a class="btn btn-outline-primary" href="#" role="button">Rent Receipt</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    <a class="btn btn-primary" href="{% url 'addrent' %}" role="button">Add Rent</a>
+  </div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+  <div class="tab-pane fade" id="bond" role="tabpanel" aria-labelledby="bond-tab">...</div>
+</div>
+
+{% endblock %}

@@ -12,5 +12,5 @@ print(x[1])
 print(y[1])
 print(np.argmax(x[1]))
 
-# plt.imshow(x[1])
-# plt.show()
+plt.imshow(x[1])
+plt.show()
