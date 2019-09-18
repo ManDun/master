@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+  <h1 class="display-4">Text Classifier</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#csvModal">
+  CSV Source
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="csvModal" tabindex="-1" role="dialog" aria-labelledby="csvModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="csvModalLabel">Add CSV Source</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/upload-file" method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="csvsource">Select CSV source</label>
+            <input type="file" class="form-control-file" id="csvsource" aria-describedby="csvsource" placeholder="No of rows" name="csvsource">
+          </div>
+          <div class="form-group">
+            <label for="csvrows">No of Rows</label>
+            <input type="text" class="form-control" id="csvrows" aria-describedby="csvrows" placeholder="No of rows">
+            <small id="csvrows" class="form-text text-muted">Mention the no of rows to classify, leave blank if you want all.</small>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+        </form>
+      </div>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="container">
+    {% if source=="upload" %}
+    {% for datarow in data %}
+    {{ data.to_html() }}
+    <div class="alert alert-primary" role="alert">
+        File uploaded: {{name}}
+    </div>
+    <a class="btn btn-outline-primary btn-lg" href="/classifytext" role="button">Start Classify</a>
+    {% elif source=="main" %}
+    <h2>Upload file to start classify</h2>
+    {% elif source=="classify" %}
+    <h1>Start</h1>
+    {% else %}
+    <h1>Select a valid source csv</h1>
+    {% endif %}
+    </div>
+
+
+{% endblock %}
