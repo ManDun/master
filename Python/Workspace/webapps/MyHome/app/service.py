@@ -12,9 +12,9 @@ def chat_dict(question):
         'some address':'Thank you, your quote for this insurance would be about 850 a year with coverage of 500,000. <br> Can I help you with anything else?',
         'no thanks':'Thank you for your time, I had a nice chat. <br> Have a good day',
         'i need to make a claim':'Sure, can you help me with a few details please. <br> What kind of claim do you want to raise?',
-        'accident':'so sorry to hear that, hope you are ok?'
-        'i am okay':'Good to hear, <br> so where did this happen?'
-        'brisbane':'Here is your claim number G123456, please proceed to add your photos and we will get in touch'
+        'accident':'so sorry to hear that, hope you are ok?',
+        'i am okay':'Good to hear, <br> so where did this happen?',
+        'brisbane':'Here is your claim number G123456, please proceed to add your photos and we will get in touch',
     }
 
     response = dict.get(question.lower(), default_response)
