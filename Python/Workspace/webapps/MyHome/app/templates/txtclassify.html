@@ -3,12 +3,12 @@
 {% block content %}
 <div class="jumbotron">
   <h1 class="display-4">Text Classifier</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <p class="lead">Use this page to classify text.</p>
   <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p>Select a csv / xls / xlsx to upload and then click classify to classify each line</p>
   <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#csvModal">
-  CSV Source
+  Select Source
 </button>
 
 <!-- Modal -->
@@ -44,12 +44,19 @@
 </div>
 <div class="container">
     {% if source=="upload" %}
-    {% for datarow in data %}
-    {{ data.to_html() }}
-    <div class="alert alert-primary" role="alert">
-        File uploaded: {{name}}
-    </div>
-    <a class="btn btn-outline-primary btn-lg" href="/classifytext" role="button">Start Classify</a>
+      {% if message is not none %}
+      <div class="alert alert-danger" role="alert">
+        {{ message }}
+      </div>
+      {% else %}
+        <div class="alert alert-primary" role="alert">
+          File uploaded: {{name}}
+        </div>
+        {{ data.to_html() }}
+        <a class="btn btn-outline-primary btn-lg" href="/classifytext" role="button">Start Classify</a>
+      {% endif %}  
+    
+    
     {% elif source=="main" %}
     <h2>Upload file to start classify</h2>
     {% elif source=="classify" %}
