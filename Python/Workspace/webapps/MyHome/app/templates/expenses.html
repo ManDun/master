@@ -3,31 +3,81 @@
 {% block content %}
 <div class="jumbotron">
   <h1 class="display-4">Expenses</h1>
-  <p class="lead">Use this page to maintain expenses</p>
+  <p class="lead">Use this page to add expenses for today: <strong>{{ date }}</strong></p>
   <hr class="my-4">
-  <p>To add an expense, click on the button and provide details.</p>
-  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#expenseModal">
-    Add Expense
+  <p>To add expenses, click on Add and enter your details.</p>
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addexpenseModal">
+    Add Expenses
+  </button>
+  <button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-target="#addexpenseModal">
+    Expense Dashboard
   </button>
 </div>
 
+<div class="row justify-content-center">
+  <div class="col-10">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Type</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for expense in expenses %}
+        <tr>
+          <th scope="row">{{ expense.id }}</th>
+          <td>{{ expense.name }}</td>
+          <td>{{ expense.type }}</td>
+          <td>{{ expense.amount }}</td>
+          <td>{{ expense.details }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
 <!-- Modal -->
-<div class="modal fade" id="expenseModal" tabindex="-1" role="dialog" aria-labelledby="expenseModalLabel" aria-hidden="true">
+<div class="modal fade" id="addexpenseModal" tabindex="-1" role="dialog" aria-labelledby="addexpenseModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="expenseModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="addexpenseModalLabel">Add Expense</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <form action="/expenses" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name">
+          </div>
+          <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="text" class="form-control" id="amount" name="amount">
+          </div>
+          <div class="form-group">
+            <label for="type">Type</label>
+            <input type="text" class="form-control" id="type" name="type">
+          </div>
+          <div class="form-group">
+            <label for="details">Details</label>
+            <input type="text" class="form-control" id="details" name="details">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Add</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
+</div>
 {% endblock %}

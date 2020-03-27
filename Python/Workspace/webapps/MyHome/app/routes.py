@@ -1,16 +1,27 @@
 from flask import render_template, request, redirect
-from app import app
-import pandas as pd
-from . import service as ser
+import datetime
+from flask import Flask
+from flask import render_template
+import sys, os
+from sqlalchemy import func
 
 
-file=''
+app = Flask(__name__)
+
+print(os.getcwd())
+sys.path.append(os.path.abspath(os.path.join('..', 'data')))
+
+from data import manager as manager
+from data.manager import app,db
+from data.models import User,Logs,Expense
+from data import service as service
 
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {'username': 'Miguel'}
-    return render_template('index.html', title='Home', user=user)
+
+    db.create_all()
+    return render_template('index.html', title='Home')
 
 
 @app.route('/financials')
@@ -19,10 +30,30 @@ def financials():
     return render_template('financials.html')
 
 
-@app.route('/expenses')
+@app.route('/expenses', methods=['GET', 'POST'])
 def expenses():
 
-    return render_template('expenses.html')
+    expenses = []
+
+    if request.method == 'POST':
+        name = request.form.get('name')  
+        type = request.form.get('type')
+        amount = request.form.get('amount')
+        details = request.form.get('details')
+
+        expense = Expense(name=name, type=type, amount=amount, details=details, user_id='1')
+
+        db.session.add(expense)
+        db.session.commit()
+        print(f'Expense added {name}')
+
+    else:
+        print('Get Request')
+        
+    expenses = Expense.query.filter(func.DATE(Logs.date_posted) == datetime.date.today()).all()
+    print(len(expenses))
+
+    return render_template('expenses.html', expenses=expenses, date=datetime.date.today().strftime('%d-%b-%Y'))
 
 
 @app.route('/imgclassify')
@@ -80,6 +111,53 @@ def chatty():
 def get_bot_response():
     userText = request.args.get('msg')
     print(userText)
-    answer = str(ser.chat_dict(userText))
+    answer = str(service.chat_dict(userText))
     print(answer)
     return answer
+
+@app.route('/todayslogs', methods=['GET', 'POST'])
+def todayslogs():
+
+    logs = []
+
+    if request.method == 'POST':
+        content = request.form.get('content')
+        remarks = request.form.get('remarks')
+        log = Logs(content=content, remarks=remarks, user_id='1')
+
+        db.session.add(log)
+        db.session.commit()
+        print(f'Content added {content}')
+
+    else:
+        print('Get Request')
+        
+    logs = Logs.query.filter(func.DATE(Logs.date_posted) == datetime.date.today()).all()
+
+    print(len(logs))
+
+    return render_template('todayslogs.html', date=datetime.date.today().strftime('%d-%b-%Y'), logs=logs)
+
+@app.route('/users', methods=['GET', 'POST'])
+def users():
+
+    users = []
+
+    if request.method == 'POST':
+        name = request.form.get('name')  
+        username = request.form.get('username')
+        email = request.form.get('email')
+        password = request.form.get('password')
+        user = User(name, username, email, password)
+
+        db.session.add(user)
+        db.session.commit()
+        print(f'User added {username}')
+
+    else:
+        print('Get Request')
+        
+    users = User.query.all()
+    print(len(users))
+
+    return render_template('users.html', users=users)
