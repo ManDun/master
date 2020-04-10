@@ -148,7 +148,8 @@ def users():
         username = request.form.get('username')
         email = request.form.get('email')
         password = request.form.get('password')
-        user = User(name, username, email, password)
+        role = 'admin'
+        user = User(name, username, email, password, role)
 
         db.session.add(user)
         db.session.commit()
