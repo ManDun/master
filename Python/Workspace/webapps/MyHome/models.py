@@ -1,6 +1,7 @@
+from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime, timezone
-from .manager import db
 from sqlalchemy import Column, Integer, Time, String
+from app import db
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -59,4 +60,3 @@ class Expense(db.Model):
 
     def __repr__(self):
         return f"User('{self.username}', '{self.email}')"
-

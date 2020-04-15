@@ -1,26 +1,14 @@
-from flask import render_template, request, redirect
-import datetime
-from flask import Flask
-from flask import render_template
-import sys, os
+from flask import Flask, render_template, request, redirect
+import datetime, sys, os
 from sqlalchemy import func
-
-
-app = Flask(__name__)
-
-print(os.getcwd())
-sys.path.append(os.path.abspath(os.path.join('..', 'data')))
-
-from data import manager as manager
-from data.manager import app,db
-from data.models import User,Logs,Expense
-from data import service as service
+from models import User,Logs,Expense
+from app import app, db
 
 @app.route('/')
 @app.route('/index')
 def index():
 
-    db.create_all()
+    #db.create_all()
     return render_template('index.html', title='Home')
 
 
