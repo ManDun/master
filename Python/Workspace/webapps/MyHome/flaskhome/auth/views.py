@@ -19,27 +19,27 @@ def index():
 @bp.route('/users', methods=['GET', 'POST'])
 def users():
 
-    users = []
+    has_access = False
+    username = check_if_loggedin()
+    if username is not None:
+        users = []
+        user = User.query.filter_by(role='admin').all()
 
-    if request.method == 'POST':
-        name = request.form.get('name')  
-        username = request.form.get('username')
-        email = request.form.get('email')
-        password = request.form.get('password')
-        role = 'admin'
-        user = User(name, username, email, password, role)
+        print(user)
 
-        db.session.add(user)
-        db.session.commit()
-        print(f'User added {username}')
+        for user in user:
+            if username in user.username:
+                has_access = True
 
+        if has_access:
+            users = User.query.all()
+            print(f'User: {username} tried to access users tab and has access')
+            return render_template('users.html', users=users)
+        else:
+            print(f'User: {username} tried to access users tab but doesnt have access')
+            return render_template('index.html', user=username)
     else:
-        print('Get Request')
-        
-    users = User.query.all()
-    print(len(users))
-
-    return render_template('users.html', users=users)
+        return redirect(url_for('auth.login'))
 
 
 @bp.route('/login', methods=['GET', 'POST'])
@@ -72,6 +72,32 @@ def login():
         print('Get Request')
 
         return render_template('login.html', title='Login')
+
+@bp.route('/register', methods=['GET', 'POST'])
+def register():
+
+    if request.method == 'POST':
+        name = request.form.get('name')
+        username = request.form.get('username')
+        email = request.form.get('email')
+        password = request.form.get('password')
+        error = None
+        
+        print(f'Email: {email}, password: {password}')
+
+        user = User(name, username, email, password)
+
+        db.session.add(user)
+        db.session.commit()
+
+        print(f'User added {username}')
+
+        return render_template('/login.html')       
+
+    else:
+        print('Get Request')
+
+        return render_template('register.html', title='Login')
 
 @bp.route('/logout', methods=['GET'])
 def logout():

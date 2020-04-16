@@ -51,6 +51,8 @@ def create_app(test_config=None):
 
     # apply the blueprints to the app
     from flaskhome import auth
+    from flaskhome import blogs
+    from flaskhome import financials
 
     app.register_blueprint(auth.bp)
     app.register_blueprint(blogs.bp)
