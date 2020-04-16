@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, redirect
 import datetime
 from .models import Expense
-from flaskhome.logs.models import Logs
+from flaskhome.blogs.models import Logs
 from flaskhome import db
 
 bp = Blueprint('expenses', __name__)

@@ -53,8 +53,8 @@ def create_app(test_config=None):
     from flaskhome import auth
 
     app.register_blueprint(auth.bp)
-    app.register_blueprint(logs.bp)
-    app.register_blueprint(expenses.bp)
+    app.register_blueprint(blogs.bp)
+    app.register_blueprint(financials.bp)
 
     ## a simple page that says hello
 

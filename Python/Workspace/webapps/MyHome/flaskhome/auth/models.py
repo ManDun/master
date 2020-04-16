@@ -1,6 +1,6 @@
 from flaskhome import db
-from flaskhome.expenses.models import Expense
-from flaskhome.logs.models import Logs
+from flaskhome.financials.models import Expense
+from flaskhome.blogs.models import Logs
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)

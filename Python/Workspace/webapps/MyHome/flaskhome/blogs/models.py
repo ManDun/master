@@ -1,5 +1,4 @@
 from flaskhome import db
-#from flaskhome.auth.models import User
 
 class Logs(db.Model):
     id = db.Column(db.Integer, primary_key=True)
