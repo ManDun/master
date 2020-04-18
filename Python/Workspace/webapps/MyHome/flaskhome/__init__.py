@@ -3,12 +3,12 @@ import click
 from flask import Flask
 from flask.cli import with_appcontext
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate, MigrateCommand
 from . import consts as const
 
 __version__ = (1, 0, 0, "dev")
 
 db = SQLAlchemy()
-
 
 def create_app(test_config=None):
     """Create and configure an instance of the Flask application."""
@@ -58,15 +58,12 @@ def create_app(test_config=None):
     app.register_blueprint(blogs.bp)
     app.register_blueprint(financials.bp)
 
-    ## a simple page that says hello
-
     return app
 
 
 def init_db():
     db.drop_all()
     db.create_all()
-
 
 @click.command("init-db")
 @with_appcontext

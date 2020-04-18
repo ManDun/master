@@ -4,14 +4,19 @@ from flaskhome import db
 
 bp = Blueprint('auth', __name__)
 
+print('called')
+
 @bp.route('/')
 @bp.route('/index')
 def index():
 
     username = check_if_loggedin()
     if username is not None:
-        #db.create_all()
-        return render_template('index.html', title='Home', user=username)
+        if check_if_admin():
+            template = 'baseadmin.html'
+        else:
+            template = 'base.html'
+        return render_template('index.html', title='Home', user=username, parentpage=template)
     else:
         return redirect(url_for('auth.login'))
 
@@ -22,14 +27,7 @@ def users():
     has_access = False
     username = check_if_loggedin()
     if username is not None:
-        users = []
-        user = User.query.filter_by(role='admin').all()
-
-        print(user)
-
-        for user in user:
-            if username in user.username:
-                has_access = True
+        has_access = check_if_admin()
 
         if has_access:
             users = User.query.all()
@@ -115,3 +113,16 @@ def check_if_loggedin():
     else:
         print(username)
         return username
+
+def check_if_admin():
+
+    username = None
+    username = session.get('username')
+
+    user = User.query.filter_by(role='admin').all()
+
+    for user in user:
+        if username in user.username:
+            return True
+        else:
+            return False
