@@ -83,7 +83,5 @@ def expensesdashboard():
     else:
         expenses = Expense.query.filter(db.func.DATE(Expense.date) == datetime.date.today()).filter_by(user_id=userid).all()
 
-    expenses = Expense.query.filter_by(user_id=userid).all()
-
     return render_template('expensesdashboard.html', expenses=expenses)
 
