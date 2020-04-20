@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for, session, flash
+from flask import Blueprint, render_template, request, redirect, url_for, session, flash, send_from_directory
 from .models import User
 from flaskhome import db
 
@@ -96,6 +96,11 @@ def register():
         print('Get Request')
 
         return render_template('register.html', title='Login')
+
+@bp.route('/robots.txt')
+def robots():
+
+    return send_from_directory('static', 'robots.txt')
 
 @bp.route('/logout', methods=['GET'])
 def logout():
