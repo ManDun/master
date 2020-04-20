@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+  <h1 class="display-4">Expenses Dashboard</h1>
+  <p class="lead">Use this page to view all expenses in a dashboard</strong></p>
+  <hr class="my-4">
+  <p>To view expenses for each day or month or year filter using dropdowns.</p>
+  <form class="form-inline my-2 my-lg-0" action="/expensesdashboard" method="GET">
+    <div class="form-row">
+      <div class="col">
+        <select class="custom-select btn-secondary" name="frequency">
+          <option selected> Frequency </option>
+          <option value="daily">Daily</option>
+          <option value="monthly">Monthly</option>
+          <option value="yearly">Yearly</option>
+        </select>
+      </div>
+      <div class="col">
+        <input class="form-control mr-lg-2" type="date" placeholder="dd/mm/yyyy" name="date">
+      </div>
+      <div class="col">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-10">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Date</th>
+          <th scope="col">Name</th>
+          <th scope="col">Type</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for expense in expenses %}
+        <tr>
+          <th scope="row"><a href="">{{ loop.index }}</a></th>
+          <td>{{ expense.date.strftime('%d %b %Y') }}</td>
+          <td>{{ expense.name }}</td>
+          <td>{{ expense.type }}</td>
+          <td>{{ expense.amount }}</td>
+          <td>{{ expense.details }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

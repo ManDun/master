@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+  <h1 class="display-4">Logs Dashboard</h1>
+  <p class="lead">This page provides all the dashboard features for Logs added</p>
+  <hr class="my-4">
+  <p>Select Date to view Logs for a particular date or month or year</p>
+  <form class="form-inline my-2 my-lg-0" action="/logsdashboard" method="GET">
+    <div class="form-row">
+      <div class="col">
+        <select class="custom-select btn-secondary" name="frequency">
+          <option selected> Frequency </option>
+          <option value="daily">Daily</option>
+          <option value="monthly">Monthly</option>
+          <option value="yearly">Yearly</option>
+        </select>
+      </div>
+      <div class="col">
+        <input class="form-control mr-lg-2" type="date" placeholder="dd/mm/yyyy" name="date">
+      </div>
+      <div class="col">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-10">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Date</th>
+          <th scope="col">Logs</th>
+          <th scope="col">Remarks</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% set i=0 %}
+        {% for log in logs %}
+        {% set i=i+1 %}
+        <tr>
+          <th scope="row"><a href="">{{ loop.index }}</a></th>
+          <td>{{ log.date_posted.strftime('%d %b %Y')}}</td>
+          <td>{{ log.content }}</td>
+          <td>{{ log.remarks }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
