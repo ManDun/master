@@ -78,3 +78,20 @@ def logsdashboard():
 
     return render_template('logsdashboard.html', logs=logs)
 
+
+@bp.route('/editlog/<int:logid>')
+def editlog(logid):
+
+    username = session.get("username")
+
+    if username is None:
+        return redirect(url_for('auth.login'))
+
+    logs = []
+    user = User.query.filter_by(username=username).first()
+    userid = user.id
+
+    logs = Logs.query.filter_by(id=logid).all()
+
+    return render_template('logsdashboard.html', logs=logs)
+

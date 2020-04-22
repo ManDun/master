@@ -18,6 +18,7 @@ def index():
             template = 'base.html'
         return render_template('index.html', title='Home', user=username, parentpage=template)
     else:
+        print('User is not logged in, redirecting to login page')
         return redirect(url_for('auth.login'))
 
 
@@ -37,6 +38,7 @@ def users():
             print(f'User: {username} tried to access users tab but doesnt have access')
             return render_template('index.html', user=username)
     else:
+        print('User is not logged in, redirecting to login page')
         return redirect(url_for('auth.login'))
 
 
@@ -48,7 +50,7 @@ def login():
         password = request.form.get('password')
         error = None
         
-        print(f'Email: {email}, password: {password}')
+        print(f'Logging in using Email: {email}')
 
         user = User.query.filter_by(email=email).first()
 
@@ -60,14 +62,16 @@ def login():
         if error is None:
             session.clear()
             session['username'] = user.username
+            print(f'User email {email} logged in')
             return redirect(url_for('auth.index'))
         else:
             flash(error)
             print(error)
+            print(f'User email {email} log in failed {error}')
             return render_template('/login.html', error=error)       
 
     else:
-        print('Get Request')
+        print('Redirecting as Get Request to Login')
 
         return render_template('login.html', title='Login')
 
@@ -81,7 +85,7 @@ def register():
         password = request.form.get('password')
         error = None
         
-        print(f'Email: {email}, password: {password}')
+        print(f'Registering Email: {email}')
 
         user = User(name, username, email, password)
 
@@ -106,6 +110,7 @@ def robots():
 def logout():
 
     session.clear()
+    print(f'User logged out')
     return render_template('login.html', title='Login')
 
 def check_if_loggedin():

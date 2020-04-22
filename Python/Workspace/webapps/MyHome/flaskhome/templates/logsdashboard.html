@@ -42,7 +42,7 @@
         {% for log in logs %}
         {% set i=i+1 %}
         <tr>
-          <th scope="row"><a href="">{{ loop.index }}</a></th>
+          <th scope="row"><a href="/editlog/{{log.id}}">{{ loop.index }}</a></th>
           <td>{{ log.date_posted.strftime('%d %b %Y')}}</td>
           <td>{{ log.content }}</td>
           <td>{{ log.remarks }}</td>
