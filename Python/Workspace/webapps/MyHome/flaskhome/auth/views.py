@@ -4,7 +4,7 @@ from flaskhome import db
 
 bp = Blueprint('auth', __name__)
 
-print('called')
+print('Auth Model Called')
 
 @bp.route('/')
 @bp.route('/index')
@@ -66,7 +66,7 @@ def login():
             return redirect(url_for('auth.index'))
         else:
             flash(error)
-            print(error)
+            print(f'Error: {error} logging in' )
             print(f'User email {email} log in failed {error}')
             return render_template('/login.html', error=error)       
 
@@ -121,7 +121,6 @@ def check_if_loggedin():
     if username is None:
         return None
     else:
-        print(username)
         return username
 
 def check_if_admin():
