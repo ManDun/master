@@ -5,10 +5,13 @@ from flask.cli import with_appcontext
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate, MigrateCommand
 from . import consts as const
+from flask_migrate import Migrate
+from flask_login import LoginManager
 
 __version__ = (1, 0, 0, "dev")
 
 db = SQLAlchemy()
+login_manager = LoginManager()
 
 def create_app(test_config=None):
     """Create and configure an instance of the Flask application."""
@@ -33,10 +36,14 @@ def create_app(test_config=None):
 
     app.config.from_mapping(
         # default secret that should be overridden in environ or config
-        SECRET_KEY=os.environ.get("SECRET_KEY", "dev"),
+        SECRET_KEY='mykey',
         SQLALCHEMY_DATABASE_URI=db_url,
         SQLALCHEMY_TRACK_MODIFICATIONS=False,
     )
+
+    Migrate(app, db)
+    login_manager.init_app(app)
+    login_manager.login_view = 'login'
 
     if test_config is None:
         # load the instance config, if it exists, when not testing

@@ -2,9 +2,9 @@ from flask import Blueprint, render_template, request, redirect, url_for, sessio
 from .models import User
 from flaskhome import db
 
-bp = Blueprint('auth', __name__)
+bp = Blueprint('auth', __name__)ß
 
-print('Auth Model Called')
+print('Auth View Called')
 
 @bp.route('/')
 @bp.route('/index')
@@ -56,7 +56,7 @@ def login():
 
         if user is None:
             error = "Incorrect username/email"
-        elif user.password != password:
+        elif not check_password(user.password, password):
             error = "Incorrect password"
 
         if error is None:
@@ -86,6 +86,8 @@ def register():
         error = None
         
         print(f'Registering Email: {email}')
+
+        password = encrypt_pass(password)
 
         user = User(name, username, email, password)
 
